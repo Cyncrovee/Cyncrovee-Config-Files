@@ -25,6 +25,10 @@ vim.opt.hlsearch=true
 vim.opt.scrolloff=10
 
 -- Split windows right/below
+vim.opt.splitright=true
+vim.opt.splitbelow=true
+
+-- Set search case options
 vim.opt.ignorecase=true
 vim.opt.smartcase=true
 
