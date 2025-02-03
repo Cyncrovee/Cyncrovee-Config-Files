@@ -1,0 +1,7 @@
+vim
+nvim
+gitui
+zellij
+fzf
+ripgrep
+bat
