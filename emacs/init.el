@@ -34,8 +34,7 @@
 ;; Load theme
 (load-theme 'solarized-gruvbox-dark)
 
-;; Enable modes
-(vertico mode)
+;; Enable mode(s)
 (evil-mode)
 
 ;; Automatically refresh file
