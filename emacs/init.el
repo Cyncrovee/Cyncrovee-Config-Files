@@ -49,6 +49,9 @@
 ;; Display line number/column
 (column-number-mode)
 
+;; Enable autosuggestions
+(completion-preview-mode)
+
 ;; Stop error sounds
 (setq visible-bell t)
 
