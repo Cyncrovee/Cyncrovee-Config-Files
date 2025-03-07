@@ -1,0 +1,120 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "modules": [
+    "title",
+    {
+        "type": "custom",
+        "format": "---------------------------------------"
+    },
+    {
+        "type": "custom",
+        "format": "BASE SOFTWARE:"
+    },
+    {
+        "key": "{#cyan}| Distro",
+        "type": "os"
+    },
+    {
+        "key": "{#cyan}| Kernel",
+        "type": "kernel"
+    },
+    {
+        "key": "{#cyan}| BIOS",
+        "type": "bios"
+    },
+    {
+        "key": "{#cyan}| Boot Manager",
+        "type": "bootmgr"
+    },
+    {
+        "key": "{#cyan}| Init System",
+        "type": "initsystem"
+    },
+    {
+        "type": "custom",
+        "format": "MISC SOFTWARE:"
+    },
+    {
+        "key": "{#light_magenta}| Packages",
+        "type": "packages"
+    },
+    {
+        "key": "{#light_magenta}| Terminal",
+        "type": "terminal"
+    },
+    {
+        "key": "{#light_magenta}| Editor",
+        "type": "editor"
+    },
+    {
+        "key": "{#light_magenta}| Vulkan",
+        "type": "vulkan"
+    },
+    {
+        "key": "{#light_magenta}| OpenGL",
+        "type": "opengl"
+    },
+    {
+        "type": "custom",
+        "format": "HARDWARE:"
+    },
+    {
+        "key": "{#white}| Board",
+        "type": "board"
+    },
+    {
+        "key": "{#white}| Display",
+        "type": "display"
+    },
+    {
+        "key": "{#white}| CPU",
+        "type": "cpu"
+    },
+    {
+        "key": "{#white}| GPU",
+        "type": "gpu"
+    },
+    {
+        "key": "{#white}| Memory",
+        "type": "memory"
+    },
+    {
+        "key": "{#white}| Disk",
+        "type": "disk"
+    },
+    {
+        "type": "custom",
+        "format": "SYSTEM:"
+    },
+    {
+        "key": "{#light_magenta}| Uptime",
+        "type": "uptime"
+    },
+    {
+        "key": "{#light_magenta}| Date & Time",
+        "type": "datetime"
+    },
+    {
+        "type": "custom",
+        "format": "APPEARENCE:"
+    },
+    {
+        "key": "{#cyan}| Desktop Env",
+        "type": "de"
+    },
+    {
+        "key": "{#cyan}| Window Manager",
+        "type": "wm"
+    },
+    {
+        "key": "{#cyan}| Cursor",
+        "type": "cursor"
+    },
+    {
+        "key": "{#cyan}| Font",
+        "type": "font"
+    },
+    "break",
+    "colors"
+  ]
+}
