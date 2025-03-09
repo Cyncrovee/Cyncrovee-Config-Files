@@ -57,10 +57,5 @@ vim.api.nvim_create_autocmd("ModeChanged", {
   end
 })
 
-local function statusLine()
-  -- Return the statusline content
-  return ("%f %y%m%r %Ll:%{fileSizeVar}b %=%{modeVar}|Buf-%n%=%l:%c %p%% ")
-end
-
--- Set the statusbar to the return value of the statusLine function
-vim.opt.statusline = statusLine()
+-- Set up the statusbar
+vim.opt.statusline = ("%f %y%m%r %Ll:%{fileSizeVar}b%=%{modeVar}:Buf-%n | %l:%c %p%% ")

@@ -1,0 +1,5 @@
+gnome-tweaks
+gnome-boxes
+gnome-music
+obs-studio
+libreoffice
