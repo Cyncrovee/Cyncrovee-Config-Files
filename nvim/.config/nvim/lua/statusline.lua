@@ -1,6 +1,7 @@
 -- Init modeVar global variable to avoid "modeVar not found" error
 vim.g.modeVar = ""
 vim.g.fileSizeVar = ""
+vim.g.gitBranch = ""
 
 function getMode()
   -- Set modeVar to the correct value depending on the current mode
@@ -9,7 +10,7 @@ function getMode()
   if mode == "n" then
     vim.g.modeVar = "NORMAL"
   elseif mode == "i" then
-   vim.g.modeVar = "INSERT"
+    vim.g.modeVar = "INSERT"
   elseif mode == "v" then
     vim.g.modeVar = "VISUAL-CHAR"
   elseif mode == "V" then
@@ -31,6 +32,16 @@ function getMode()
   end
 end
 
+function getGitBranch()
+  -- Get the current git branch
+  local getBranch = io.popen("git branch --show-current")
+  local branch = getBranch:read("*a")
+  -- If this line is removed, "^@" may be appended to the branch name
+  branch = branch:sub(1, -2)
+  getBranch:close()
+  vim.g.gitBranch = branch
+end
+
 function getFileSize()
   -- Get the file size from the current buffer
   vim.g.fileSizeVar = vim.fn.getfsize(vim.api.nvim_buf_get_name(0))
@@ -42,6 +53,7 @@ end
 vim.api.nvim_create_autocmd("BufEnter", {
   callback = function()
     getMode()
+    getGitBranch()
     getFileSize()
   end
 })
@@ -58,4 +70,4 @@ vim.api.nvim_create_autocmd("ModeChanged", {
 })
 
 -- Set up the statusbar
-vim.opt.statusline = ("%f %y%m%r %Ll:%{fileSizeVar}b%=%{modeVar}:Buf-%n | %l:%c %p%% ")
+vim.opt.statusline = ("%#PmenuSel#%f %y%m%r %Ll:%{fileSizeVar}b | %{gitBranch} %=%#DiffChange# %#Pmenu# %{modeVar}:Buf-%n | %l:%c %p%% ")
