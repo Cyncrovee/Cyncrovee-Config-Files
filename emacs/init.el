@@ -1,65 +1,60 @@
-;; Setup use-package
+;; Setup use-package (see: https://github.com/jwiegley/use-package)
 (eval-when-compile
   (add-to-list 'load-path "<path where use-package is installed>")
   (require 'use-package))
 
-;; Setup packages
+;; ELPA Packages
 (use-package solarized-theme
   :ensure t)
-
-(use-package evil
-  :ensure t)
-
 (use-package org
   :ensure t)
-
 (use-package markdown-mode
   :ensure t)
-
 (use-package magit
   :ensure t)
-
-(use-package which-key
-  :ensure t)
-
 (use-package indent-bars
   :ensure t)
-
-(use-package vertico
-  :ensure t)
-
 (use-package evil
+  :ensure t
+  :init
+  (evil-mode))
+(use-package company
+  :ensure t
+  :init
+  (global-company-mode))
+(use-package vertico
+  :ensure t
+  :init
+  (vertico-mode))
+(use-package flycheck
+  :ensure t
+  :init
+  (global-flycheck-mode))
+
+;; Setup MELPA stable (see https://stable.melpa.org/#/getting-started)
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://stable.melpa.org/packages/") t)
+
+;; MELPA Packages
+(use-package find-file-in-project
   :ensure t)
+(use-package doom-modeline
+  :ensure t
+  :init (doom-modeline-mode))
+(setq doom-modeline-icon nil) ;; Disable modeline icons
 
 ;; Load theme
 (load-theme 'solarized-gruvbox-dark)
 
 ;; Enable mode(s)
-(evil-mode)
+(global-auto-revert-mode) ;; Automatically refresh file
+(global-display-line-numbers-mode) ;; Enable line numbers
+(global-hl-line-mode) ;; Highlight current line
+(column-number-mode) ;; Display line number/column
+;; (completion-preview-mode) ;; Enable autosuggestions (Only available in Emacs 30.1 and up)
 
-;; Automatically refresh file
-(global-auto-revert-mode)
-
-;; Enable line numbers
-(global-display-line-numbers-mode)
-
-;; Highlight current line
-(global-hl-line-mode)
-
-;; Display line number/column
-(column-number-mode)
-
-;; Enable autosuggestions
-(completion-preview-mode)
-
-;; Stop error sounds
-(setq visible-bell t)
-
-;; Disable backup files
-(setq make-backup-files nil)
-
-;; Set tab spaces to 4
-(setq-default tab-width 4)
-
-;; Convert tabs to sapces
-(setq-default indent-tabs-mode nil)
+;; Set options
+(setq-default make-backup-files nil) ;; Disable backup files
+(setq-default tab-width 4) ;; Set tab spaces to 4
+(setq-default indent-tabs-mode nil) ;; Convert tabs to spaces
+;; (setq visible-bell t) ;; Stops error sounds, however may enable a screen flashing/flickering effect
