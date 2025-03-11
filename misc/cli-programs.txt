@@ -8,3 +8,7 @@ zellij
 fzf
 ripgrep
 bat
+uv
+hyfetch
+fastfetch
+

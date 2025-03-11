@@ -1,5 +1,6 @@
 gnome-tweaks
 gnome-boxes
 gnome-music
+blanket
 obs-studio
 libreoffice

@@ -41,7 +41,10 @@
 (use-package doom-modeline
   :ensure t
   :init (doom-modeline-mode))
-(setq doom-modeline-icon nil) ;; Disable modeline icons
+(setq-default doom-modeline-icon nil) ;; Disable modeline icons
+(setq-default doom-modeline-indent-info t) ;; Show information about the indentation settings
+(setq-default doom-modeline-total-line-number t) ;; Show the total amount of lines in the buffer
+(setq-default doom-modeline-workspace-name t) ;; Show workspace name
 
 ;; Load theme
 (load-theme 'solarized-gruvbox-dark)
