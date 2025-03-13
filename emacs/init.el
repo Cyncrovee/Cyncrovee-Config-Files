@@ -1,11 +1,12 @@
-;; Setup use-package (see: https://github.com/jwiegley/use-package)
+;; Setup use-package (see: https://github.com/jwiegley/use-package, GPL-3.0)
 (eval-when-compile
   (add-to-list 'load-path "<path where use-package is installed>")
   (require 'use-package))
 
-;; ELPA Packages
+;; ELPA Theme(s)
 (use-package solarized-theme
   :ensure t)
+;; ELPA Packages
 (use-package org
   :ensure t)
 (use-package markdown-mode
@@ -30,11 +31,19 @@
   :ensure t
   :init
   (global-flycheck-mode))
+(use-package orderless ;; See https://github.com/oantolin/orderless (GPL-3.0)
+  :ensure t
+  :custom
+  (completion-styles '(orderless basic))
+  (completion-category-overrides '((file (styles basic partial-completion)))))
 
-;; Setup MELPA stable (see https://stable.melpa.org/#/getting-started)
+;; Setup MELPA stable (see https://stable.melpa.org/#/getting-started and https://github.com/melpa/melpa, GPL-3.0)
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://stable.melpa.org/packages/") t)
 
+;; MELPA Theme(s)
+(use-package doom-themes
+  :ensure t)
 ;; MELPA Packages
 (use-package find-file-in-project
   :ensure t)
@@ -47,7 +56,7 @@
 (setq-default doom-modeline-workspace-name t) ;; Show workspace name
 
 ;; Load theme
-(load-theme 'solarized-gruvbox-dark)
+(load-theme 'solarized-gruvbox-light)
 
 ;; Enable mode(s)
 (global-auto-revert-mode) ;; Automatically refresh file
