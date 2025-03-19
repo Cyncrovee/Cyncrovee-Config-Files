@@ -43,6 +43,10 @@
         "type": "terminal"
     },
     {
+        "key": "{#light_magenta}| Shell",
+        "type": "shell"
+    },
+    {
         "key": "{#light_magenta}| Editor",
         "type": "editor"
     },

@@ -47,14 +47,14 @@ function getFileSize()
   vim.g.fileSizeVar = vim.fn.getfsize(vim.api.nvim_buf_get_name(0))
 end
 
--- Call getMode() and getFileSize() after entering a buffer
+-- Call getMode(), getFileSize() and getFileSize() after entering a buffer
 -- Call getFileSize() after setting the modified var for a buffer
 -- Call getMode() when the mode changes
 vim.api.nvim_create_autocmd("BufEnter", {
   callback = function()
     getMode()
-    getGitBranch()
     getFileSize()
+    getGitBranch()
   end
 })
 vim.api.nvim_create_autocmd("BufModifiedSet", {
