@@ -1,4 +1,5 @@
 ;; Setup use-package (see: https://github.com/jwiegley/use-package, GPL-3.0)
+;; Setup use-package (See: https://github.com/jwiegley/use-package, GPL-3.0)
 (eval-when-compile
   (add-to-list 'load-path "<path where use-package is installed>")
   (require 'use-package))
@@ -13,15 +14,17 @@
   :ensure t)
 (use-package magit
   :ensure t)
-(use-package indent-bars
-  :ensure t)
 (use-package flycheck
   :ensure t)
 (use-package embark
   :ensure t)
-(use-package evil
+(use-package indent-bars ;; See: https://github.com/jdtsmith/indent-bars (GPL-3.0)
+  :ensure t
+  :hook ((lsp-mode org-mode) . indent-bars-mode))
+(use-package evil ;; See: https://github.com/emacs-evil/evil (GPL-3.0) & https://github.com/emacs-evil/evil-collection (GPL-3.0)
   :ensure t
   :init
+  (setq evil-want-keybinding nil)
   (evil-mode))
 (use-package company
   :ensure t
@@ -35,13 +38,13 @@
   :ensure t
   :init
   (marginalia-mode))
-(use-package orderless ;; See https://github.com/oantolin/orderless (GPL-3.0)
+(use-package orderless ;; See: https://github.com/oantolin/orderless (GPL-3.0)
   :ensure t
   :custom
   (completion-styles '(orderless basic))
   (completion-category-overrides '((file (styles basic partial-completion)))))
 
-;; Setup MELPA stable (see https://stable.melpa.org/#/getting-started and https://github.com/melpa/melpa, GPL-3.0)
+;; Setup MELPA stable (See: https://stable.melpa.org/#/getting-started and https://github.com/melpa/melpa, GPL-3.0)
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://stable.melpa.org/packages/") t)
 
@@ -49,7 +52,18 @@
 (use-package doom-themes
   :ensure t)
 ;; MELPA Packages
+(use-package evil-collection ;; See: https://github.com/emacs-evil/evil (GPL-3.0) & https://github.com/emacs-evil/evil-collection (GPL-3.0)
+  :after evil
+  :ensure t
+  :init
+  (evil-collection-init))
 (use-package find-file-in-project
+  :ensure t)
+(use-package lsp-mode ;; See: https://github.com/emacs-lsp/lsp-mode (GPL-3.0)
+  :ensure t
+  :hook (rust-ts-mode . lsp-deferred)
+  :commands (lsp-deferred))
+(use-package lsp-ui
   :ensure t)
 (use-package doom-modeline
   :ensure t
@@ -59,7 +73,7 @@
 (setq-default doom-modeline-workspace-name t)    ;; Show workspace name
 
 ;; Load theme
-(load-theme 'doom-opera)
+(load-theme 'doom-opera) ;; Feel free to swap out with another theme
 
 ;; Enable mode(s)
 (global-auto-revert-mode)          ;; Automatically refresh file
