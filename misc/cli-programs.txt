@@ -1,14 +1,13 @@
 fish
 vim
-nvim
+neovim
 helix
 gitui
 tmux
 zellij
+superfile
 fzf
 ripgrep
 bat
-uv
-hyfetch
 fastfetch
-
+hyfetch
