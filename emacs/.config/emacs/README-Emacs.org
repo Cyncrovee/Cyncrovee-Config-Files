@@ -1,0 +1,33 @@
+* Emacs README
+
+This README is meant to hold information about the emacs configuration, as it’s getting quite large at this point and it’s becoming difficult to keep track of everything at a high level.
+
+** Repositories
+- ELPA
+- MELPA
+
+** Packages
+*** ELPA
+- Org
+- Markdown-Mode
+- Magit
+- Flycheck
+- Embark
+- Projectile
+- Indent Bars
+- Projectile
+- Evil
+- Company
+- Vertico
+- Marginalia
+- Orderless
+*** MELPA
+- Find-File-in-Project
+- LSP-Mode
+- Evil-Collection
+- Doom-Modeline
+- Dashboard
+
+** Themes
+*** MELPA
+- Doom-Themes
