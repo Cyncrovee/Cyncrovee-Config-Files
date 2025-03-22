@@ -4,6 +4,7 @@
 
 ## The following are compatable with GNU Stow:
 - Alacritty
+- Ghostty
 - Emacs
 - Neovim (nvim)
 - Vim
