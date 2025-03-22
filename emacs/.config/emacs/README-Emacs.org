@@ -9,7 +9,6 @@ This README is meant to hold information about the emacs configuration, as it’
 ** Packages
 *** ELPA
 - Org
-- Markdown-Mode
 - Magit
 - Flycheck
 - Embark
@@ -31,3 +30,14 @@ This README is meant to hold information about the emacs configuration, as it’
 ** Themes
 *** MELPA
 - Doom-Themes
+
+** Options
+- Modes
+  - global-auto-revert-mode: Helps keep buffers in sync with what is on the disk
+  - global-display-line-numbers-mode: Shows line numbers in the status column
+  - global-hl-line-mode: Highlights the current line
+  - column-number-mode: Shows the column number on the mode line
+  - electric-pairs-mode: Automatically closes parens, e.g ()
+  - electric-quotes-mode: Automatically closes quotes, e.g ""
+  - completion-preview-mode: A new mode recently added, allows for built-in completion
+    - Currently disabled in this config
