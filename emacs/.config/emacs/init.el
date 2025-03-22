@@ -82,6 +82,7 @@
 (global-auto-revert-mode)          ; Automatically refresh file
 (global-display-line-numbers-mode) ; Enable line numbers
 (global-hl-line-mode)              ; Highlight current line
+(global-tab-line-mode)             ; Enable tab line
 (column-number-mode)               ; Display line number/column
 (electric-pair-mode)               ; Automatically close parens
 (electric-quote-mode)              ; Automatically close quotes

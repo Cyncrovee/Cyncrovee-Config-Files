@@ -2,6 +2,10 @@
 
 This README is meant to hold information about the emacs configuration, as it’s getting quite large at this point and it’s becoming difficult to keep track of everything at a high level.
 
+** Notes
+- Treat Boot Theme as Safe
+  - When first booting the config, it may prompt you to manually confirm whether or not you want to load the theme defined with "(load-theme)" function, as enabling themes can run code. After which, it may prompt you to treat the theme as safe for future sessions- if you choose to do so, it will add a "(custom-set-variables)" section to the init.el file. If said section is *below* the "(load-theme)" function, it will continue to prompt you to manually set the theme on boot. The prevent this, you can try moving the "(custom-set-variables)" section to *above* the "(load-theme)" function (which is how I have been using it for the most part).
+
 ** Repositories
 - ELPA
 - MELPA
@@ -21,7 +25,6 @@ This README is meant to hold information about the emacs configuration, as it’
 - Marginalia
 - Orderless
 *** MELPA
-- Find-File-in-Project
 - LSP-Mode
 - Evil-Collection
 - Doom-Modeline
@@ -36,8 +39,17 @@ This README is meant to hold information about the emacs configuration, as it’
   - global-auto-revert-mode: Helps keep buffers in sync with what is on the disk
   - global-display-line-numbers-mode: Shows line numbers in the status column
   - global-hl-line-mode: Highlights the current line
+  - global-tab-line-mode: Enables a web browser-like tab line
   - column-number-mode: Shows the column number on the mode line
   - electric-pairs-mode: Automatically closes parens, e.g ()
   - electric-quotes-mode: Automatically closes quotes, e.g ""
   - completion-preview-mode: A new mode recently added, allows for built-in completion
-    - Currently disabled in this config
+    - Currently not enabled in this config
+- Setq Options
+  - make-backup-files nil: Disable backup files
+  - auto-save-default nil: Disable auto save files
+  - create-lock-files nil: Disable lock file creation
+  - tab-width 4: Set tab space to 4
+  - indent-tabs-mode nil: Ensure indentation cannot use tab characters
+  - visible-bell t: Stops error sounds, however may enable a screen flashing/flickering effect
+    - Currently not enabled in this config due to the aforementioned effect
