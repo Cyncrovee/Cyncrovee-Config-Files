@@ -58,6 +58,8 @@
 (use-package doom-themes
   :ensure t)
 ;; MELPA Packages
+(use-package treemacs
+  :ensure t)
 (use-package lsp-mode                            ; See: https://github.com/emacs-lsp/lsp-mode (GPL-3.0)
   :ensure t
   :hook (rust-ts-mode . lsp-deferred)
@@ -80,6 +82,15 @@
   :config
   (setq dashboard-center-content t)
   (setq dashboard-vertically-center-content t)
+  (setq dashboard-footer-messages '("We trade one villain for another..."
+                                    "Change is difficult, but it’s how we grow"
+                                    "It’s kind of like Vim, but not"
+                                    "Be wary of bankruptcy!"
+                                    "Don’t drink and dive!"
+                                    "Trans rights are human rights!"
+                                    "Splash Text!"
+                                    "We all lift together!"
+                                    "Just one more package..."))
   (setq dashboard-items '((recents  . 10)
                           (projects . 5)
                           (agenda   . 5)))
@@ -97,14 +108,19 @@
 (column-number-mode)                           ; Display line number/column
 (electric-pair-mode)                           ; Automatically close parens
 (electric-quote-mode)                          ; Automatically close quotes
+(windmove-mode)                                ; Easier window switching
 ;; Set options
 (setq-default make-backup-files nil) ; Disable backup files
 (setq-default auto-save-default nil) ; Disable auto save files
 (setq-default create-lockfiles nil)  ; Disable lock file creation
 (setq-default tab-width 4)           ; Set tab spaces to 4
 (setq-default indent-tabs-mode nil)  ; Convert tabs to spaces
+(evil-set-undo-system 'undo-redo)    ; Set up undo/redo for evil
 ;; Set keymaps
+(windmove-default-keybindings)                 ; Use windmove default keybinds
 (keymap-global-set "C-c d" 'dashboard-open)    ; Open/refresh the dashboard
 (keymap-global-set "C-c b" 'buffer-menu)       ; Open the buffer menu
 (keymap-global-set "C-c k" 'kill-this-buffer)  ; Kill the current buffer
 (keymap-global-set "C-c f" 'lsp-format-buffer) ; Format the current buffer via the LSP
+(keymap-global-set "C-c e" 'embark-act)        ; Call embark
+(keymap-global-set "C-c t" 'treemacs)          ; Opens the treemacs file tree

@@ -9,7 +9,7 @@ This README is meant to hold information about the emacs configuration, as it’
 
 ** Repositories
 - ELPA
-- MELPA
+- MELPA (Stable)
 
 ** Packages
 - ELPA
@@ -26,6 +26,7 @@ This README is meant to hold information about the emacs configuration, as it’
   - Marginalia
   - Orderless
 - MELPA
+  - Treemacs
   - LSP-Mode
   - Evil-Collection
   - Doom-Modeline
@@ -59,6 +60,14 @@ This README is meant to hold information about the emacs configuration, as it’
     - Currently not enabled in this config due to the aforementioned effect
 - Keymaps
   - dashboard-open: C-c d
+    - Opens/refreshes the dashboard
   - buffer-menu: C-c b
+    - Opens the buffer menu
   - kill-this-buffer: C-c k
+    - Kills the current buffer
   - lsp-format-buffer: C-c f
+    - Calls on the LSP to format the current buffer
+  - embark-act: C-c e
+    - Calls on embark-act
+  - treemacs: C-c t
+    - Opens the treemacs file tree
