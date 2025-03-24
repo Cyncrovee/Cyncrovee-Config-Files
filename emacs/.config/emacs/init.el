@@ -1,18 +1,23 @@
 ;;; Package Managment
+;;; Package Managment (ELPA)
 ;; Setup use-package (See: https://github.com/jwiegley/use-package, GPL-3.0)
 (eval-when-compile
   (add-to-list 'load-path "<path where use-package is installed>")
   (require 'use-package))
-
-;; ELPA Packages
-(use-package org
+;; ELPA Theme(s)
+(use-package modus-themes
   :ensure t)
+;; ELPA Packages
 (use-package magit
   :ensure t)
 (use-package flycheck
   :ensure t)
 (use-package embark
   :ensure t)
+(use-package org
+  :ensure t)
+(setq org-todo-keywords
+      '((sequence "TODO" "ACTIVE" "INPROGRESS" "|" "DONE" "INACTIVE")))
 (use-package projectile
   :ensure t
   :init
@@ -28,7 +33,10 @@
 (use-package company
   :ensure t
   :init
-  (global-company-mode))
+  (setq-default company-minimum-prefix-length 1)
+  (setq-default company-idle-delay 0)
+  (global-company-mode)
+  (company-tng-mode))
 (use-package vertico
   :ensure t
   :init
@@ -42,6 +50,8 @@
   :custom
   (completion-styles '(orderless basic))
   (completion-category-overrides '((file (styles basic partial-completion)))))
+
+;;; Package Managment (MELPA)
 ;; Setup MELPA stable (See: https://stable.melpa.org/#/getting-started and https://github.com/melpa/melpa, GPL-3.0)
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://stable.melpa.org/packages/") t)
@@ -69,28 +79,33 @@
 (use-package dashboard                           ; See https://github.com/emacs-dashboard/emacs-dashboard (GPL-3.0)
   :ensure t
   :config
+  (setq dashboard-center-content t)
+  (setq dashboard-vertically-center-content t)
+  (setq dashboard-items '((recents  . 10)
+                          (projects . 5)
+                          (agenda   . 5)))
   (dashboard-setup-startup-hook))
-(setq dashboard-center-content t)
-(setq dashboard-items '((recents  . 10)
-                        (projects . 5)
-                        (agenda   . 5)))
 
 ;;; General Options
 ;; Load theme
 (load-theme 'doom-opera) ; Feel free to swap out with another theme
 ;; Enable mode(s)
-(global-auto-revert-mode)          ; Automatically refresh file
-(global-display-line-numbers-mode) ; Enable line numbers
-(global-hl-line-mode)              ; Highlight current line
-(global-tab-line-mode)             ; Enable tab line
-(column-number-mode)               ; Display line number/column
-(electric-pair-mode)               ; Automatically close parens
-(electric-quote-mode)              ; Automatically close quotes
-;; (completion-preview-mode)       ; Enable autosuggestions (Only available in Emacs 30.1 and up)
+(global-auto-revert-mode)                      ; Automatically refresh file
+(menu-bar--display-line-numbers-mode-relative) ; Set line numbers mode to relative
+(global-display-line-numbers-mode)             ; Enable line numbers
+(global-hl-line-mode)                          ; Highlight current line
+(global-tab-line-mode)                         ; Enable tab line
+(column-number-mode)                           ; Display line number/column
+(electric-pair-mode)                           ; Automatically close parens
+(electric-quote-mode)                          ; Automatically close quotes
 ;; Set options
 (setq-default make-backup-files nil) ; Disable backup files
 (setq-default auto-save-default nil) ; Disable auto save files
 (setq-default create-lockfiles nil)  ; Disable lock file creation
 (setq-default tab-width 4)           ; Set tab spaces to 4
 (setq-default indent-tabs-mode nil)  ; Convert tabs to spaces
-;; (setq visible-bell t)             ; Stops error sounds, however may enable a screen flashing/flickering effect
+;; Set keymaps
+(keymap-global-set "C-c d" 'dashboard-open)    ; Open/refresh the dashboard
+(keymap-global-set "C-c b" 'buffer-menu)       ; Open the buffer menu
+(keymap-global-set "C-c k" 'kill-this-buffer)  ; Kill the current buffer
+(keymap-global-set "C-c f" 'lsp-format-buffer) ; Format the current buffer via the LSP
