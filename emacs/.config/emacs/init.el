@@ -1,4 +1,3 @@
-;;; Package Managment
 ;;; Package Managment (ELPA)
 ;; Setup use-package (See: https://github.com/jwiegley/use-package, GPL-3.0)
 (eval-when-compile
