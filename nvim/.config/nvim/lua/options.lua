@@ -23,6 +23,7 @@ vim.opt.hlsearch=true
 
 -- Set scrolloff options
 vim.opt.scrolloff=10
+vim.opt.sidescrolloff=10
 
 -- Split windows right/below
 vim.opt.splitright=true
