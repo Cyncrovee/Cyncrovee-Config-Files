@@ -1,17 +1,16 @@
-* Emacs README
+#+TITLE:
+#+DESCRIPTION: This README is meant to hold information about the emacs configuration, as it’s getting quite large at this point and it’s becoming difficult to keep track of everything at a high level.
 
-This README is meant to hold information about the emacs configuration, as it’s getting quite large at this point and it’s becoming difficult to keep track of everything at a high level.
-
-** Notes
+* Notes
 - Current Default Theme: Doom Opera
 - Treat Boot Theme as Safe
   - When first booting the config, it may prompt you to manually confirm whether or not you want to load the theme defined with "(load-theme)" function, as enabling themes can run code. After which, it may prompt you to treat the theme as safe for future sessions- if you choose to do so, it will add a "(custom-set-variables)" section to the init.el file. If said section is *below* the "(load-theme)" function, it will continue to prompt you to manually set the theme on boot. The prevent this, you can try moving the "(custom-set-variables)" section to *above* the "(load-theme)" function (which is how I have been using it for the most part).
 
-** Repositories
+* Repositories
 - ELPA
 - MELPA (Stable)
 
-** Packages
+* Packages
 - ELPA
   - Org
   - Magit
@@ -32,13 +31,13 @@ This README is meant to hold information about the emacs configuration, as it’
   - Doom-Modeline
   - Dashboard
 
-** Themes
+* Themes
 - ELPA
   - Modus-Themes
 - MELPA
   - Doom-Themes
 
-** Options
+* Options
 - Modes
   - global-auto-revert-mode: Helps keep buffers in sync with what is on the disk
   - menu-bar--display-line-numbers-mode-relative: Sets line numbers to be relative

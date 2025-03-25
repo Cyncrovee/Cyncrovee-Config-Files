@@ -4,6 +4,7 @@ eln-cache/
 transient/
 tree-sitter/
 auto-save-list/
+.cache/
 projectile-bookmarks.eld
 projects
 recentf

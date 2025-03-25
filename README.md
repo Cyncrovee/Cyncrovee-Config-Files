@@ -1,6 +1,7 @@
 # cynvee-main-config-files
 
-## This is a git repo for my config files.
+This is a git repo for my configuration files.
+If you decide to use any of these configs, feel free to add or remove from them as you see fit- Have fun with it!
 
 ## The following are compatable with GNU Stow:
 - Alacritty
