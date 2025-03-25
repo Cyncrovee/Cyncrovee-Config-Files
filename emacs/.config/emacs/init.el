@@ -14,9 +14,10 @@
 (use-package embark
   :ensure t)
 (use-package org
-  :ensure t)
-(setq org-todo-keywords
-      '((sequence "TODO" "ACTIVE" "INPROGRESS" "|" "DONE" "INACTIVE")))
+  :ensure t
+  :init
+  (setq org-todo-keywords
+      '((sequence "TODO" "ACTIVE" "INPROGRESS" "|" "DONE" "INACTIVE"))))
 (use-package projectile
   :ensure t
   :init
@@ -58,8 +59,17 @@
 (use-package doom-themes
   :ensure t)
 ;; MELPA Packages
-(use-package treemacs
-  :ensure t)
+(use-package treemacs                            ; See https://github.com/Alexander-Miller/treemacs (GPL-3.0)
+  :ensure t
+  :init
+  (treemacs-project-follow-mode)
+  (setq-default treemacs-no-png-images t))
+(use-package centaur-tabs                        ; See https://github.com/ema2159/centaur-tabs (GPL-3.0)
+  :ensure t
+  :init
+  (centaur-tabs-mode)
+  (centaur-tabs-group-by-projectile-project)
+  (setq-default centaur-tabs-style "wave"))      ; Some themes have trouble with this setting, try setting the theme as safe, then restarting emacs
 (use-package lsp-mode                            ; See: https://github.com/emacs-lsp/lsp-mode (GPL-3.0)
   :ensure t
   :hook (rust-ts-mode . lsp-deferred)
@@ -92,8 +102,8 @@
                                     "We all lift together!"
                                     "Just one more package..."))
   (setq dashboard-items '((recents  . 10)
-                          (projects . 5)
-                          (agenda   . 5)))
+                          (projects . 10)
+                          (agenda   . 10)))
   (dashboard-setup-startup-hook))
 
 ;;; General Options
@@ -104,7 +114,6 @@
 (menu-bar--display-line-numbers-mode-relative) ; Set line numbers mode to relative
 (global-display-line-numbers-mode)             ; Enable line numbers
 (global-hl-line-mode)                          ; Highlight current line
-(global-tab-line-mode)                         ; Enable tab line
 (column-number-mode)                           ; Display line number/column
 (electric-pair-mode)                           ; Automatically close parens
 (electric-quote-mode)                          ; Automatically close quotes
@@ -122,5 +131,6 @@
 (keymap-global-set "C-c b" 'buffer-menu)       ; Open the buffer menu
 (keymap-global-set "C-c k" 'kill-this-buffer)  ; Kill the current buffer
 (keymap-global-set "C-c f" 'lsp-format-buffer) ; Format the current buffer via the LSP
+(keymap-global-set "C-c i" 'org-indent-mode)   ; Enter org indent mode
 (keymap-global-set "C-c e" 'embark-act)        ; Call embark
 (keymap-global-set "C-c t" 'treemacs)          ; Opens the treemacs file tree
