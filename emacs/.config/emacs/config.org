@@ -192,17 +192,3 @@
 ;;(menu-bar-mode -1)   ; Disable menu bar
 ;;(scroll-bar-mode -1) ; Disable scroll bar
 #+END_SRC
-
-* Personal Setups (this should not be included in the git repo)
-#+BEGIN_SRC elisp
-(tool-bar-mode -1)
-(menu-bar-mode -1)
-(scroll-bar-mode -1)
-(set-frame-font "JetBrainsMono Nerd Font 14")
-(setq-default use-short-answers t)
-(setq-default scroll-conservatively 15)
-(setq-default scroll-margin 20)
-(setq dashboard-startup-banner "/home/ella/Documents/Misc/Emacs-Dashboard-Banner.txt")
-(setq org-agenda-files
-      '("~/Documents/MEGA/Notes/Org Agenda/"))
-#+END_SRC
