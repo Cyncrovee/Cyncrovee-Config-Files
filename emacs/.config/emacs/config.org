@@ -1,7 +1,9 @@
 #+TITLE: Emacs Configuration
 #+AUTHOR: Cyncrovee
+#+DESCRIPTION: My emacs configuration, the file format is .org however should it be able to be parsed and applied to emacs via org-babel
 
-* Setup use-package (See: https://github.com/jwiegley/use-package, GPL-3.0)
+* Setup use-package
+- See: https://github.com/jwiegley/use-package, GPL-3.0
 #+BEGIN_SRC elisp
 (eval-when-compile
   (add-to-list 'load-path "<path where use-package is installed>")
@@ -10,11 +12,23 @@
 
 * Package Managment (ELPA)
 ** ELPA Themes(s)
+- Modus-Themes
 #+BEGIN_SRC elisp
 (use-package modus-themes
   :ensure t)
 #+END_SRC
 ** ELPA Packages
+- Magit
+- Flycheck
+- Embark
+- Org (Mode)
+- Projectile
+- Indent-Bars
+- Evil
+- Company
+- Vertico
+- Marginalia
+- Orderless
 #+BEGIN_SRC elisp
 (use-package magit
   :ensure t)
@@ -62,17 +76,26 @@
 #+END_SRC
 
 * Package Managment (MELPA)
-** Setup MELPA stable (See: https://stable.melpa.org/#/getting-started and https://github.com/melpa/melpa, GPL-3.0)
+** Setup MELPA stable
+- See: https://stable.melpa.org/#/getting-started and https://github.com/melpa/melpa, GPL-3.0
 #+BEGIN_SRC elisp
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://stable.melpa.org/packages/") t)
 #+END_SRC
 ** MELPA Theme(s)
+- Doom-Themes
 #+BEGIN_SRC elisp
 (use-package doom-themes
   :ensure t)
 #+END_SRC
 ** MELPA Packages
+- Treemacs
+- Centaur-Tabs
+- LSP-Mode
+- LSP-UI
+- Evil-Collection
+- Doom-Modeline
+- Dashboard
 #+BEGIN_SRC elisp
 (use-package treemacs                            ; See https://github.com/Alexander-Miller/treemacs (GPL-3.0)
   :ensure t
@@ -127,7 +150,7 @@
 
 * General Options
 ** Load Theme
-Note that when first booting the config, it may prompt you to manually confirm whether or not you want to load the theme defined with "(load-theme)" function, as enabling themes can run code. After which, it may prompt you to treat the theme as safe for future sessions- if you choose to do so, it will add a "(custom-set-variables)" section to the init.el file. If said section is *below* the "(load-theme)" function, it will continue to prompt you to manually set the theme on boot. The prevent this, you can try moving the "(custom-set-variables)" section to *above* the "(load-theme)" function (which is how I have been using it for the most part).
+- Note that when first booting the config, it may prompt you to manually confirm whether or not you want to load the theme defined with "(load-theme)" function, as enabling themes can run code. After which, it may prompt you to treat the theme as safe for future sessions- if you choose to do so, it will add a "(custom-set-variables)" section to the init.el file. If said section is *below* the "(load-theme)" function, it will continue to prompt you to manually set the theme on boot. The prevent this, you can try moving the "(custom-set-variables)" section to *above* the "(load-theme)" function (which is how I have been using it for the most part).
 #+BEGIN_SRC elisp
 (load-theme 'doom-opera) ; Feel free to swap out with another theme
 #+END_SRC
