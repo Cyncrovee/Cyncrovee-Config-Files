@@ -1,6 +1,6 @@
 #+TITLE: Emacs Configuration
 #+AUTHOR: Cyncrovee
-#+DESCRIPTION: My emacs configuration, the file format is .org however it should be able to be parsed and applied to emacs via org-babel.
+#+DESCRIPTION: My emacs configuration, the file format is .org however it should be able to be parsed and applied to emacs via org-babel
 
 * Setup use-package
 - See: https://github.com/jwiegley/use-package, GPL-3.0
@@ -140,6 +140,7 @@
                                     "Splash Text!"
                                     "We all lift together!"
                                     "I Give It All!"
+                                    "What goes up..."
                                     "We trade one villain for another..."
                                     "There’ll be another time..."
                                     "Just one more package..."))
@@ -151,7 +152,7 @@
 
 * General Options
 ** Load Theme
-- Note that when first booting the config, it may prompt you to manually confirm whether or not you want to load the theme defined with "(load-theme)" function, as enabling themes can run code. After which, it may prompt you to treat the theme as safe for future sessions- if you choose to do so, it will add a "(custom-set-variables)" section to the init.el file. If said section is *below* the "(load-theme)" function, it will continue to prompt you to manually set the theme on boot. The prevent this, you can try moving the "(custom-set-variables)" section to *above* the "(load-theme)" function (which is how I have been using it for the most part).
+- Note that when first booting the config, it may prompt you to manually confirm whether or not you want to load the theme defined with "(load-theme)" function, as enabling themes can run code. After which, it may prompt you to treat the theme as safe for future sessions- if you choose to do so, it will add a "(custom-set-variables)" section to the init.el file. If said section is *below* the "(load-theme)" function, it will continue to prompt you to manually set the theme on boot. The prevent this, you can try moving the "(custom-set-variables)" section to *above* the "(load-theme)" function (which is how I have been using it for the most part). If you’re having trouble with theme compatability with centaur tabs, treating a theme as safe then reloading emacs might fix it.
 #+BEGIN_SRC elisp
 (load-theme 'doom-opera) ; Feel free to swap out with another theme
 #+END_SRC
@@ -168,21 +169,26 @@
 #+END_SRC
 ** Set options
 #+BEGIN_SRC elisp
-(setq-default make-backup-files nil) ; Disable backup files
-(setq-default auto-save-default nil) ; Disable auto save files
-(setq-default create-lockfiles nil)  ; Disable lock file creation
-(setq-default tab-width 4)           ; Set tab spaces to 4
-(setq-default indent-tabs-mode nil)  ; Convert tabs to spaces
-(evil-set-undo-system 'undo-redo)    ; Set up undo/redo for evil
+(setq-default make-backup-files nil)        ; Disable backup files
+(setq-default auto-save-default nil)        ; Disable auto save files
+(setq-default create-lockfiles nil)         ; Disable lock file creation
+(setq-default display-line-numbers-width 4) ; Set the width of the line number column
+(setq-default tab-width 4)                  ; Set tab spaces to 4
+(setq-default indent-tabs-mode nil)         ; Convert tabs to spaces
+(evil-set-undo-system 'undo-redo)           ; Set up undo/redo for evil
 #+END_SRC
 ** Set keymaps
 #+BEGIN_SRC elisp
-(windmove-default-keybindings)                 ; Use windmove default keybinds
-(keymap-global-set "C-c d" 'dashboard-open)    ; Open/refresh the dashboard
-(keymap-global-set "C-c b" 'buffer-menu)       ; Open the buffer menu
-(keymap-global-set "C-c k" 'kill-this-buffer)  ; Kill the current buffer
-(keymap-global-set "C-c f" 'lsp-format-buffer) ; Format the current buffer via the LSP
-(keymap-global-set "C-c i" 'org-indent-mode)   ; Enter org indent mode
-(keymap-global-set "C-c e" 'embark-act)        ; Call embark
-(keymap-global-set "C-c t" 'treemacs)          ; Opens the treemacs file tree
+(windmove-default-keybindings)                         ; Use windmove default keybinds
+(keymap-global-set "C-c d" 'dashboard-open)            ; Open/refresh the dashboard
+(keymap-global-set "C-c g" 'centaur-tabs--groups-menu) ; Open the centaur-tabs group menu
+(keymap-global-set "C-c k" 'kill-this-buffer)          ; Kill the current buffer
+(keymap-global-set "C-c f" 'lsp-format-buffer)         ; Format the current buffer via the LSP
+(keymap-global-set "C-c i" 'org-indent-mode)           ; Enter org indent mode
+(keymap-global-set "C-c e" 'embark-act)                ; Call embark
+(keymap-global-set "C-c t" 'treemacs)                  ; Opens the treemacs file tree
+(keymap-global-set "C-c o" 'org-agenda)                ; Open the org agenda
+(keymap-global-set "C-c x" 'org-agenda-exit)           ; Close the org agenda
+(keymap-global-set "C-c b m" 'buffer-menu)             ; Open the buffer menu
+(keymap-global-set "C-c b i" 'ibuffer)                 ; Open the buffer menu
 #+END_SRC
