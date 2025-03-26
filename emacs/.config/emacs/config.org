@@ -1,6 +1,6 @@
 #+TITLE: Emacs Configuration
 #+AUTHOR: Cyncrovee
-#+DESCRIPTION: My emacs configuration, the file format is .org however should it be able to be parsed and applied to emacs via org-babel
+#+DESCRIPTION: My emacs configuration, the file format is .org however it should be able to be parsed and applied to emacs via org-babel.
 
 * Setup use-package
 - See: https://github.com/jwiegley/use-package, GPL-3.0
@@ -132,7 +132,8 @@
   (setq dashboard-vertically-center-content t)
   (setq dashboard-footer-messages '("Change is difficult, but it’s how we grow"
                                     "It’s kind of like Vim, but not"
-                                    "Org or markdown- decisions, decisions"
+                                    "Technically, it’s a display editor"
+                                    "Org or Markdown- decisions, decisions"
                                     "Be wary of bankruptcy!"
                                     "Don’t drink and dive!"
                                     "Trans rights are human rights!"
@@ -184,11 +185,4 @@
 (keymap-global-set "C-c i" 'org-indent-mode)   ; Enter org indent mode
 (keymap-global-set "C-c e" 'embark-act)        ; Call embark
 (keymap-global-set "C-c t" 'treemacs)          ; Opens the treemacs file tree
-#+END_SRC
-** Misc
-#+BEGIN_SRC elisp
-;;; You can use these lines to disable the tool, menu and/or scroll bars. Simply uncomment them (remove the semicolons before them)
-;;(tool-bar-mode -1)   ; Disable tool bar
-;;(menu-bar-mode -1)   ; Disable menu bar
-;;(scroll-bar-mode -1) ; Disable scroll bar
 #+END_SRC
