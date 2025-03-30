@@ -5,17 +5,17 @@
 * Setup use-package
 - See: https://github.com/jwiegley/use-package, GPL-3.0
 #+BEGIN_SRC elisp
-(eval-when-compile
-  (add-to-list 'load-path "<path where use-package is installed>")
-  (require 'use-package))
+  (eval-when-compile
+    (add-to-list 'load-path "<path where use-package is installed>")
+    (require 'use-package))
 #+END_SRC
 
 * Package Managment (ELPA)
 ** ELPA Themes(s)
 - Modus-Themes
 #+BEGIN_SRC elisp
-(use-package modus-themes
-  :ensure t)
+  (use-package modus-themes
+    :ensure t)
 #+END_SRC
 ** ELPA Packages
 - Magit
@@ -23,131 +23,135 @@
 - Embark
 - Org (Mode)
 - Projectile
-- Indent-Bars
-- Evil
+- Indent-Bars (See: https://github.com/jdtsmith/indent-bars, GPL-3.0, changes made)
+- Evil (See: https://github.com/emacs-evil/evil & https://github.com/emacs-evil/evil-collection, both GPL-3.0)
 - Company
 - Vertico
 - Marginalia
-- Orderless
+- Orderless (See: https://github.com/oantolin/orderless, GPL-3.0)
 #+BEGIN_SRC elisp
-(use-package magit
-  :ensure t)
-(use-package flycheck
-  :ensure t)
-(use-package embark
-  :ensure t)
-(use-package org
-  :ensure t
-  :init
-  (setq org-todo-keywords
-      '((sequence "TODO" "ACTIVE" "INPROGRESS" "|" "DONE" "INACTIVE"))))
-(use-package projectile
-  :ensure t
-  :init
-  (projectile-mode))
-(use-package indent-bars ; See: https://github.com/jdtsmith/indent-bars (GPL-3.0)
-  :ensure t
-  :hook ((lsp-mode org-mode) . indent-bars-mode))
-(use-package evil        ; See: https://github.com/emacs-evil/evil (GPL-3.0) & https://github.com/emacs-evil/evil-collection (GPL-3.0)
-  :ensure t
-  :init
-  (setq evil-want-keybinding nil)
-  (evil-mode))
-(use-package company
-  :ensure t
-  :init
-  (setq-default company-minimum-prefix-length 1)
-  (setq-default company-idle-delay 0)
-  (global-company-mode)
-  (company-tng-mode))
-(use-package vertico
-  :ensure t
-  :init
-  (vertico-mode))
-(use-package marginalia
-  :ensure t
-  :init
-  (marginalia-mode))
-(use-package orderless   ; See: https://github.com/oantolin/orderless (GPL-3.0)
-  :ensure t
-  :custom
-  (completion-styles '(orderless basic))
-  (completion-category-overrides '((file (styles basic partial-completion)))))
+  (use-package magit
+    :ensure t)
+  (use-package flycheck
+    :ensure t)
+  (use-package embark
+    :ensure t)
+  (use-package org
+    :ensure t
+    :init
+    (setq org-todo-keywords
+        '((sequence "TODO" "ACTIVE" "INPROGRESS" "|" "DONE" "INACTIVE" "CANCELLED"))))
+  (use-package projectile
+    :ensure t
+    :init
+    (projectile-mode))
+  (use-package indent-bars
+    :ensure t
+    :hook ((lsp-mode org-mode) . indent-bars-mode))
+  (use-package evil
+    :ensure t
+    :init
+    (setq evil-want-keybinding nil)
+    (evil-mode))
+  (use-package company
+    :ensure t
+    :init
+    (setq-default company-minimum-prefix-length 1)
+    (setq-default company-idle-delay 0)
+    (global-company-mode)
+    (company-tng-mode))
+  (use-package vertico
+    :ensure t
+    :init
+    (vertico-mode))
+  (use-package marginalia
+    :ensure t
+    :init
+    (marginalia-mode))
+  (use-package orderless
+    :ensure t
+    :custom
+    (completion-styles '(orderless basic))
+    (completion-category-overrides '((file (styles basic partial-completion)))))
 #+END_SRC
 
 * Package Managment (MELPA)
 ** Setup MELPA stable
-- See: https://stable.melpa.org/#/getting-started and https://github.com/melpa/melpa, GPL-3.0
+- See: https://stable.melpa.org/#/getting-started and https://github.com/melpa/melpa, GPL-3.0 (changes made)
 #+BEGIN_SRC elisp
-(require 'package)
-(add-to-list 'package-archives '("melpa" . "https://stable.melpa.org/packages/") t)
+  (require 'package)
+  (add-to-list 'package-archives '("melpa" . "https://stable.melpa.org/packages/") t)
 #+END_SRC
 ** MELPA Theme(s)
 - Doom-Themes
 #+BEGIN_SRC elisp
-(use-package doom-themes
-  :ensure t)
+  (use-package doom-themes
+    :ensure t)
 #+END_SRC
 ** MELPA Packages
-- Treemacs
-- Centaur-Tabs
-- LSP-Mode
+- Treemacs (See https://github.com/Alexander-Miller/treemacs, GPL-3.0, changes made)
+- Centaur-Tabs (See https://github.com/ema2159/centaur-tabs, GPL-3.0, changes made)
+- LSP-Mode See: (https://github.com/emacs-lsp/lsp-mode, GPL-3.0, changes made)
 - LSP-UI
-- Evil-Collection
+- Evil-Collection (See: https://github.com/emacs-evil/evil & https://github.com/emacs-evil/evil-collection, both GPL-3.0, changes made)
 - Doom-Modeline
-- Dashboard
+- Dashboard (See https://github.com/emacs-dashboard/emacs-dashboard, GPL-3.0, changes made)
 #+BEGIN_SRC elisp
-(use-package treemacs                            ; See https://github.com/Alexander-Miller/treemacs (GPL-3.0)
-  :ensure t
-  :init
-  (treemacs-project-follow-mode)
-  (setq-default treemacs-no-png-images t))
-(use-package centaur-tabs                        ; See https://github.com/ema2159/centaur-tabs (GPL-3.0)
-  :ensure t
-  :init
-  (centaur-tabs-mode)
-  (centaur-tabs-group-by-projectile-project)
-  (setq-default centaur-tabs-style "wave"))      ; Some themes have trouble with this setting, try setting the theme as safe, then restarting emacs
-(use-package lsp-mode                            ; See: https://github.com/emacs-lsp/lsp-mode (GPL-3.0)
-  :ensure t
-  :hook (rust-ts-mode . lsp-deferred)
-  :commands (lsp-deferred))
-(use-package lsp-ui
-  :ensure t)
-(use-package evil-collection                     ; See: https://github.com/emacs-evil/evil (GPL-3.0) & https://github.com/emacs-evil/evil-collection (GPL-3.0)
-  :after evil
-  :ensure t
-  :init
-  (evil-collection-init))
-(use-package doom-modeline
-  :ensure t
-  :init (doom-modeline-mode))
-(setq-default doom-modeline-indent-info t)       ; Show information about the indentation settings
-(setq-default doom-modeline-total-line-number t) ; Show the total amount of lines in the buffer
-(setq-default doom-modeline-workspace-name t)    ; Show workspace name
-(use-package dashboard                           ; See https://github.com/emacs-dashboard/emacs-dashboard (GPL-3.0)
-  :ensure t
-  :config
-  (setq dashboard-center-content t)
-  (setq dashboard-vertically-center-content t)
-  (setq dashboard-footer-messages '("Change is difficult, but it’s how we grow"
-                                    "It’s kind of like Vim, but not"
-                                    "Technically, it’s a display editor"
-                                    "Org or Markdown- decisions, decisions"
-                                    "Be wary of bankruptcy!"
-                                    "Don’t drink and dive!"
-                                    "Trans rights are human rights!"
-                                    "Splash Text!"
-                                    "We all lift together!"
-                                    "I Give It All!"
-                                    "What goes up..."
-                                    "We trade one villain for another..."
-                                    "There’ll be another time..."
-                                    "Just one more package..."))
-  (setq dashboard-items '((recents  . 10)
-                          (projects . 10)
-                          (agenda   . 10)))
-  (dashboard-setup-startup-hook))
+        (use-package rainbow-delimiters
+          :ensure t)
+        (use-package treemacs
+          :ensure t
+          :init
+          (treemacs-project-follow-mode)
+          (setq-default treemacs-no-png-images t))
+        (use-package centaur-tabs
+          :ensure t
+          :init
+          (centaur-tabs-mode)
+          (centaur-tabs-group-by-projectile-project)
+          (setq-default centaur-tabs-style "wave"))      ; Some themes have trouble with this setting, try setting the theme as safe, then restarting emacs
+        (use-package lsp-mode
+          :ensure t
+          :hook (rust-ts-mode . lsp-deferred)
+          :commands (lsp-deferred))
+        (use-package lsp-ui
+          :ensure t)
+        (use-package evil-collection
+          :after evil
+          :ensure t
+          :init
+          (evil-collection-init))
+        (use-package doom-modeline
+          :ensure t
+          :init (doom-modeline-mode))
+        (setq-default doom-modeline-indent-info t)       ; Show information about the indentation settings
+        (setq-default doom-modeline-total-line-number t) ; Show the total amount of lines in the buffer
+        (setq-default doom-modeline-workspace-name t)    ; Show workspace name
+        (use-package dashboard
+          :ensure t
+          :config
+          (setq dashboard-center-content t)
+          (setq dashboard-vertically-center-content t)
+          (setq dashboard-footer-messages '("Change is difficult, but it’s how we grow"
+                                            "It’s kind of like Vim, but not"
+                                            "Technically, it’s a display editor"
+                                            "Org or Markdown- decisions, decisions"
+                                            "If push comes to shove, you can always try a distro"
+                                            "Have you ever been to space?"
+                                            "Be wary of bankruptcy!"
+                                            "Don’t drink and dive!"
+                                            "Trans rights are human rights!"
+                                            "Splash Text!"
+                                            "We all lift together!"
+                                            "I Give It All!"
+                                            "What goes up..."
+                                            "We trade one villain for another..."
+                                            "There’ll be another time..."
+                                            "Just one more package..."))
+          (setq dashboard-items '((recents  . 10)
+                                  (projects . 10)
+                                  (agenda   . 10)))
+          (dashboard-setup-startup-hook))
 #+END_SRC
 
 * General Options
@@ -158,37 +162,50 @@
 #+END_SRC
 ** Enable mode(s)
 #+BEGIN_SRC elisp
-(global-auto-revert-mode)                      ; Automatically refresh file
-(menu-bar--display-line-numbers-mode-relative) ; Set line numbers mode to relative
-(global-display-line-numbers-mode)             ; Enable line numbers
-(global-hl-line-mode)                          ; Highlight current line
-(column-number-mode)                           ; Display line number/column
-(electric-pair-mode)                           ; Automatically close parens
-(electric-quote-mode)                          ; Automatically close quotes
-(windmove-mode)                                ; Easier window switching
+  (global-auto-revert-mode)                      ; Automatically refresh file
+  (menu-bar--display-line-numbers-mode-relative) ; Set line numbers mode to relative
+  (global-display-line-numbers-mode)             ; Enable line numbers
+  (global-hl-line-mode)                          ; Highlight current line
+  (column-number-mode)                           ; Display line number/column
+  (electric-pair-mode)                           ; Automatically close parens
+  (electric-quote-mode)                          ; Automatically close quotes
+  (windmove-mode)                                ; Easier window switching
+#+END_SRC
+** Make hooks
+#+BEGIN_SRC elisp
+  (add-hook 'lsp-mode-hook 'rainbow-delimiters-mode)
+  (add-hook 'org-mode-hook 'rainbow-delimiters-mode)
 #+END_SRC
 ** Set options
 #+BEGIN_SRC elisp
-(setq-default make-backup-files nil)        ; Disable backup files
-(setq-default auto-save-default nil)        ; Disable auto save files
-(setq-default create-lockfiles nil)         ; Disable lock file creation
-(setq-default display-line-numbers-width 4) ; Set the width of the line number column
-(setq-default tab-width 4)                  ; Set tab spaces to 4
-(setq-default indent-tabs-mode nil)         ; Convert tabs to spaces
-(evil-set-undo-system 'undo-redo)           ; Set up undo/redo for evil
+  (setq-default make-backup-files nil)        ; Disable backup files
+  (setq-default auto-save-default nil)        ; Disable auto save files
+  (setq-default create-lockfiles nil)         ; Disable lock file creation
+  (setq-default display-line-numbers-width 4) ; Set the width of the line number column
+  (setq-default tab-width 4)                  ; Set tab spaces to 4
+  (setq-default indent-tabs-mode nil)         ; Convert tabs to spaces
+  (evil-set-undo-system 'undo-redo)           ; Set up undo/redo for evil
 #+END_SRC
 ** Set keymaps
 #+BEGIN_SRC elisp
-(windmove-default-keybindings)                         ; Use windmove default keybinds
-(keymap-global-set "C-c d" 'dashboard-open)            ; Open/refresh the dashboard
-(keymap-global-set "C-c g" 'centaur-tabs--groups-menu) ; Open the centaur-tabs group menu
-(keymap-global-set "C-c k" 'kill-this-buffer)          ; Kill the current buffer
-(keymap-global-set "C-c f" 'lsp-format-buffer)         ; Format the current buffer via the LSP
-(keymap-global-set "C-c i" 'org-indent-mode)           ; Enter org indent mode
-(keymap-global-set "C-c e" 'embark-act)                ; Call embark
-(keymap-global-set "C-c t" 'treemacs)                  ; Opens the treemacs file tree
-(keymap-global-set "C-c o" 'org-agenda)                ; Open the org agenda
-(keymap-global-set "C-c x" 'org-agenda-exit)           ; Close the org agenda
-(keymap-global-set "C-c b m" 'buffer-menu)             ; Open the buffer menu
-(keymap-global-set "C-c b i" 'ibuffer)                 ; Open the buffer menu
+  (windmove-default-keybindings)                         ; Use windmove default keybinds
+  (keymap-global-set "C-c d" 'dashboard-open)            ; Open/refresh the dashboard
+  (keymap-global-set "C-c g" 'centaur-tabs--groups-menu) ; Open the centaur-tabs group menu
+  (keymap-global-set "C-c k" 'kill-this-buffer)          ; Kill the current buffer
+  (keymap-global-set "C-c f" 'lsp-format-buffer)         ; Format the current buffer via the LSP
+  (keymap-global-set "C-c i" 'org-indent-mode)           ; Enter org indent mode
+  (keymap-global-set "C-c e" 'embark-act)                ; Call embark
+  (keymap-global-set "C-c t" 'treemacs)                  ; Opens the treemacs file tree
+  (keymap-global-set "C-c o" 'org-agenda)                ; Open the org agenda
+  (keymap-global-set "C-c x" 'org-agenda-exit)           ; Close the org agenda
+  (keymap-global-set "C-c b m" 'buffer-menu)             ; Open the buffer menu
+  (keymap-global-set "C-c b i" 'ibuffer)                 ; Open the buffer menu
+#+END_SRC
+** Extras
+- These are options that may be useful to some users, but I’m not sure if I want them as part of the repo at the moment. Feel free to uncomment them if you wish
+#+BEGIN_SRC elisp
+  ;; (setq-default use-short-answers t) ; Enable the use of short answers (y/n) in yes/no prompts
+  ;; (tool-bar-mode -1)                 ; Disable the tool bar
+  ;; (menu-bar-mode -1)                 ; Disable the menu bar
+  ;; (scroll-bar-mode -1)               ; Disable the scroll bar
 #+END_SRC
