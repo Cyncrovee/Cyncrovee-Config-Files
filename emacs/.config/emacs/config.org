@@ -36,11 +36,15 @@
     :ensure t)
   (use-package embark
     :ensure t)
+  (use-package diff-hl
+    :ensure t
+    :init
+    (global-diff-hl-mode))
   (use-package org
     :ensure t
     :init
     (setq org-todo-keywords
-        '((sequence "TODO" "ACTIVE" "INPROGRESS" "|" "DONE" "INACTIVE" "CANCELLED"))))
+        '((sequence "TODO" "ACTIVE" "INPROGRESS" "|" "DONE" "INACTIVE" "CANCELLED" "UNKNOWN"))))
   (use-package projectile
     :ensure t
     :init
