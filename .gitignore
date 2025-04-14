@@ -3,8 +3,10 @@ elpa/
 eln-cache/
 transient/
 tree-sitter/
+newsticker/
 auto-save-list/
 .cache/
+session.*
 projectile-bookmarks.eld
 projects
 recentf
