@@ -199,20 +199,22 @@
   (define-key evil-normal-state-map (kbd "C-j") 'windmove-down)
   (define-key evil-normal-state-map (kbd "C-h") 'windmove-left)
   (define-key evil-normal-state-map (kbd "C-l") 'windmove-right)
+  (define-key evil-normal-state-map (kbd "C-c h") 'next-buffer)
+  (define-key evil-normal-state-map (kbd "C-c l") 'previous-buffer)
   (keymap-global-set "<space>" 'execute-extended-command) ; Switch to the minibuffer
-  (keymap-global-set "C-c d b" 'dashboard-open)            ; Open/refresh the dashboard
-  (keymap-global-set "C-c d i" 'projectile-dired)            ; Open/refresh the dashboard
-  (keymap-global-set "C-c n" 'newsticker-show-news)      ; Show newsticker feeds
-  (keymap-global-set "C-c g" 'centaur-tabs--groups-menu) ; Open the centaur-tabs group menu
-  (keymap-global-set "C-c k" 'kill-this-buffer)          ; Kill the current buffer
-  (keymap-global-set "C-c f" 'lsp-format-buffer)         ; Format the current buffer via the LSP
-  (keymap-global-set "C-c i" 'org-indent-mode)           ; Enter org indent mode
-  (keymap-global-set "C-c e" 'embark-act)                ; Call embark
-  (keymap-global-set "C-c t" 'treemacs)                  ; Opens the treemacs file tree
-  (keymap-global-set "C-c o" 'org-agenda)                ; Open the org agenda
-  (keymap-global-set "C-c x" 'org-agenda-exit)           ; Close the org agenda
-  (keymap-global-set "C-c b m" 'buffer-menu)             ; Open the buffer menu
-  (keymap-global-set "C-c b i" 'ibuffer)                 ; Open the buffer menu
+  (keymap-global-set "C-c d b" 'dashboard-open)           ; Open/refresh the dashboard
+  (keymap-global-set "C-c d i" 'projectile-dired)         ; Open/refresh the dashboard
+  (keymap-global-set "C-c n" 'newsticker-show-news)       ; Show newsticker feeds
+  (keymap-global-set "C-c g" 'centaur-tabs--groups-menu)  ; Open the centaur-tabs group menu
+  (keymap-global-set "C-c k" 'kill-this-buffer)           ; Kill the current buffer
+  (keymap-global-set "C-c f" 'lsp-format-buffer)          ; Format the current buffer via the LSP
+  (keymap-global-set "C-c i" 'org-indent-mode)            ; Enter org indent mode
+  (keymap-global-set "C-c e" 'embark-act)                 ; Call embark
+  (keymap-global-set "C-c t" 'treemacs)                   ; Opens the treemacs file tree
+  (keymap-global-set "C-c o" 'org-agenda)                 ; Open the org agenda
+  (keymap-global-set "C-c x" 'org-agenda-exit)            ; Close the org agenda
+  (keymap-global-set "C-c b m" 'buffer-menu)              ; Open the buffer menu
+  (keymap-global-set "C-c b i" 'ibuffer)                  ; Open the buffer menu
 #+END_SRC
 ** Extras
 - These are options that may be useful to some users, but I’m not sure if I want them as part of the repo at the moment. Feel free to uncomment them if you wish
