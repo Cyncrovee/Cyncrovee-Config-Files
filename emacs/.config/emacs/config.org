@@ -193,9 +193,16 @@
 #+END_SRC
 ** Set keymaps
 #+BEGIN_SRC elisp
-  (windmove-default-keybindings)                         ; Use windmove default keybinds
-  (keymap-global-set "C-c d" 'dashboard-open)            ; Open/refresh the dashboard
-  (keymap-global-set "C-c n" 'newsticker-show-news)    ; Show newsticker feeds
+  (evil-set-leader 'normal (kbd "SPC"))
+  (define-key evil-normal-state-map (kbd "<leader> SPC") 'execute-extended-command)
+  (define-key evil-normal-state-map (kbd "C-k") 'windmove-up)
+  (define-key evil-normal-state-map (kbd "C-j") 'windmove-down)
+  (define-key evil-normal-state-map (kbd "C-h") 'windmove-left)
+  (define-key evil-normal-state-map (kbd "C-l") 'windmove-right)
+  (keymap-global-set "<space>" 'execute-extended-command) ; Switch to the minibuffer
+  (keymap-global-set "C-c d b" 'dashboard-open)            ; Open/refresh the dashboard
+  (keymap-global-set "C-c d i" 'projectile-dired)            ; Open/refresh the dashboard
+  (keymap-global-set "C-c n" 'newsticker-show-news)      ; Show newsticker feeds
   (keymap-global-set "C-c g" 'centaur-tabs--groups-menu) ; Open the centaur-tabs group menu
   (keymap-global-set "C-c k" 'kill-this-buffer)          ; Kill the current buffer
   (keymap-global-set "C-c f" 'lsp-format-buffer)         ; Format the current buffer via the LSP
