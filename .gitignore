@@ -7,8 +7,10 @@ newsticker/
 auto-save-list/
 .cache/
 session.*
+wget-log*
 projectile-bookmarks.eld
 projects
 recentf
 config.el
+personal.el
 .lsp-session-v1
