@@ -219,11 +219,3 @@
   (keymap-global-set "C-c b m" 'buffer-menu)              ; Open the buffer menu
   (keymap-global-set "C-c b i" 'ibuffer)                  ; Open the buffer menu
 #+END_SRC
-** Extras
-- These are options that may be useful to some users, but I’m not sure if I want them as part of the repo at the moment. Feel free to uncomment them if you wish
-#+BEGIN_SRC elisp
-  ;; (setq-default use-short-answers t) ; Enable the use of short answers (y/n) in yes/no prompts
-  ;; (tool-bar-mode -1)                 ; Disable the tool bar
-  ;; (menu-bar-mode -1)                 ; Disable the menu bar
-  ;; (scroll-bar-mode -1)               ; Disable the scroll bar
-#+END_SRC
