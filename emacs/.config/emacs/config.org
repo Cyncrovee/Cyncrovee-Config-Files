@@ -101,61 +101,62 @@
 - Doom-Modeline
 - Dashboard (See https://github.com/emacs-dashboard/emacs-dashboard, GPL-3.0, changes made)
 #+BEGIN_SRC elisp
-        (use-package rainbow-delimiters
-          :ensure t)
-        (use-package treemacs
-          :ensure t
-          :init
-          (treemacs-project-follow-mode)
-          (setq-default treemacs-no-png-images t))
-        (use-package centaur-tabs
-          :ensure t
-          :init
-          (centaur-tabs-mode)
-          (centaur-tabs-group-by-projectile-project)
-          (setq-default centaur-tabs-style "wave"))      ; Some themes have trouble with this setting, try setting the theme as safe, then restarting emacs
-        (use-package lsp-mode
-          :ensure t
-          :hook (rust-ts-mode . lsp-deferred)
-          :commands (lsp-deferred))
-        (use-package lsp-ui
-          :ensure t)
-        (use-package evil-collection
-          :after evil
-          :ensure t
-          :init
-          (evil-collection-init))
-        (use-package doom-modeline
-          :ensure t
-          :init (doom-modeline-mode))
-        (setq-default doom-modeline-indent-info t)       ; Show information about the indentation settings
-        (setq-default doom-modeline-total-line-number t) ; Show the total amount of lines in the buffer
-        (setq-default doom-modeline-workspace-name t)    ; Show workspace name
-        (use-package dashboard
-          :ensure t
-          :config
-          (setq dashboard-center-content t)
-          (setq dashboard-vertically-center-content t)
-          (setq dashboard-footer-messages '("Change is difficult, but it’s how we grow"
-                                            "It’s kind of like Vim, but not"
-                                            "Technically, it’s a display editor"
-                                            "Org or Markdown- decisions, decisions"
-                                            "If push comes to shove, you can always try a distro"
-                                            "Have you ever been to space?"
-                                            "Be wary of bankruptcy!"
-                                            "Don’t drink and dive!"
-                                            "Trans rights are human rights!"
-                                            "Splash Text!"
-                                            "We all lift together!"
-                                            "I Give It All!"
-                                            "What goes up..."
-                                            "We trade one villain for another..."
-                                            "There’ll be another time..."
-                                            "Just one more package..."))
-          (setq dashboard-items '((recents  . 10)
-                                  (projects . 10)
-                                  (agenda   . 10)))
-          (dashboard-setup-startup-hook))
+  (use-package rainbow-delimiters
+  :ensure t)
+  (use-package treemacs
+  :ensure t
+  :init
+  (treemacs-project-follow-mode)
+  (setq-default treemacs-no-png-images t))
+  (use-package centaur-tabs
+  :ensure t
+  :init
+  (centaur-tabs-mode)
+  (centaur-tabs-group-by-projectile-project)
+  (setq-default centaur-tabs-style "bar")        ; Some themes have trouble with this setting, try setting the theme as safe, then restarting emacs
+  (setq-default centaur-tabs-set-bar 'left))
+  (use-package lsp-mode
+  :ensure t
+  :hook (rust-ts-mode . lsp-deferred)
+  :commands (lsp-deferred))
+  (use-package lsp-ui
+  :ensure t)
+  (use-package evil-collection
+  :after evil
+  :ensure t
+  :init
+  (evil-collection-init))
+  (use-package doom-modeline
+  :ensure t
+  :init (doom-modeline-mode))
+  (setq-default doom-modeline-indent-info t)       ; Show information about the indentation settings
+  (setq-default doom-modeline-total-line-number t) ; Show the total amount of lines in the buffer
+  (setq-default doom-modeline-workspace-name t)    ; Show workspace name
+  (use-package dashboard
+  :ensure t
+  :config
+  (setq dashboard-center-content t)
+  (setq dashboard-vertically-center-content t)
+  (setq dashboard-footer-messages '("Change is difficult, but it’s how we grow"
+                                      "It’s kind of like Vim, but not"
+                                      "Technically, it’s a display editor"
+                                      "Org or Markdown- decisions, decisions"
+                                      "If push comes to shove, you can always try a distro"
+                                      "Have you ever been to space?"
+                                      "Be wary of bankruptcy!"
+                                      "Don’t drink and dive!"
+                                      "Trans rights are human rights!"
+                                      "Splash Text!"
+                                      "We all lift together!"
+                                      "I Give It All!"
+                                      "What goes up..."
+                                      "We trade one villain for another..."
+                                      "There’ll be another time..."
+                                      "Just one more package..."))
+  (setq dashboard-items '((recents  . 15)
+                          (projects . 10)
+                          (agenda   . 10)))
+  (dashboard-setup-startup-hook))
 #+END_SRC
 
 * General Options
@@ -194,6 +195,7 @@
 #+BEGIN_SRC elisp
   (windmove-default-keybindings)                         ; Use windmove default keybinds
   (keymap-global-set "C-c d" 'dashboard-open)            ; Open/refresh the dashboard
+  (keymap-global-set "C-c n" 'newsticker-show-news)    ; Show newsticker feeds
   (keymap-global-set "C-c g" 'centaur-tabs--groups-menu) ; Open the centaur-tabs group menu
   (keymap-global-set "C-c k" 'kill-this-buffer)          ; Kill the current buffer
   (keymap-global-set "C-c f" 'lsp-format-buffer)         ; Format the current buffer via the LSP
