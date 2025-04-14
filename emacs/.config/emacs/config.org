@@ -163,7 +163,11 @@
 ** Load Theme
 - Note that when first booting the config, it may prompt you to manually confirm whether or not you want to load the theme defined with "(load-theme)" function, as enabling themes can run code. After which, it may prompt you to treat the theme as safe for future sessions- if you choose to do so, it will add a "(custom-set-variables)" section to the init.el file. If said section is *below* the "(load-theme)" function, it will continue to prompt you to manually set the theme on boot. The prevent this, you can try moving the "(custom-set-variables)" section to *above* the "(load-theme)" function (which is how I have been using it for the most part). If you’re having trouble with theme compatability with centaur tabs, treating a theme as safe then reloading emacs might fix it.
 #+BEGIN_SRC elisp
-(load-theme 'doom-opera) ; Feel free to swap out with another theme
+  (load-theme 'doom-one) ; Feel free to swap out with another theme
+#+END_SRC
+** Custion Function(s)
+#+BEGIN_SRC elisp
+;; TODO
 #+END_SRC
 ** Enable mode(s)
 #+BEGIN_SRC elisp
