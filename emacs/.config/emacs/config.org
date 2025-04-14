@@ -199,13 +199,13 @@
 #+BEGIN_SRC elisp
   (evil-set-leader 'normal (kbd "SPC"))
   (define-key evil-normal-state-map (kbd "<leader> SPC") 'execute-extended-command)
-  (define-key evil-normal-state-map (kbd "C-k") 'windmove-up)
-  (define-key evil-normal-state-map (kbd "C-j") 'windmove-down)
-  (define-key evil-normal-state-map (kbd "C-h") 'windmove-left)
-  (define-key evil-normal-state-map (kbd "C-l") 'windmove-right)
-  (define-key evil-normal-state-map (kbd "C-c h") 'next-buffer)
-  (define-key evil-normal-state-map (kbd "C-c l") 'previous-buffer)
-  (keymap-global-set "<space>" 'execute-extended-command) ; Switch to the minibuffer
+  (define-key evil-normal-state-map (kbd "<leader> w") 'evil-write)
+  (keymap-global-set "C-k" 'windmove-up)    ; Move to the above window
+  (keymap-global-set "C-j" 'windmove-down)  ; Move to the below window
+  (keymap-global-set "C-h" 'windmove-left)  ; Move to the left window
+  (keymap-global-set "C-l" 'windmove-right) ; Move to the right window
+  (keymap-global-set "C-c h" 'next-buffer)                ; Move to the next buffer
+  (keymap-global-set "C-c l" 'previous-buffer)            ; Move to the previous buffer
   (keymap-global-set "C-c d b" 'dashboard-open)           ; Open/refresh the dashboard
   (keymap-global-set "C-c d i" 'projectile-dired)         ; Open/refresh the dashboard
   (keymap-global-set "C-c n" 'newsticker-show-news)       ; Show newsticker feeds
