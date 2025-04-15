@@ -106,6 +106,8 @@
 #+BEGIN_SRC elisp
   (use-package rainbow-delimiters
   :ensure t)
+  (use-package crux
+  :ensure t)
   (use-package treemacs
   :ensure t
   :init
