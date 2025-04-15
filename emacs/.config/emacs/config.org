@@ -36,6 +36,8 @@
     :ensure t)
   (use-package embark
     :ensure t)
+  (use-package avy
+    :ensure t)
   (use-package diff-hl
     :ensure t
     :init
@@ -200,6 +202,10 @@
   (evil-set-leader 'normal (kbd "SPC"))
   (define-key evil-normal-state-map (kbd "<leader> SPC") 'execute-extended-command)
   (define-key evil-normal-state-map (kbd "<leader> w") 'evil-write)
+  (define-key evil-normal-state-map (kbd "<leader> ll") 'evil-avy-goto-line)
+  (define-key evil-normal-state-map (kbd "<leader> la") 'evil-avy-goto-line-above)
+  (define-key evil-normal-state-map (kbd "<leader> lb") 'evil-avy-goto-line-below)
+  (define-key evil-normal-state-map (kbd "<leader> c") 'evil-avy-goto-char)
   (keymap-global-set "C-k" 'windmove-up)    ; Move to the above window
   (keymap-global-set "C-j" 'windmove-down)  ; Move to the below window
   (keymap-global-set "C-h" 'windmove-left)  ; Move to the left window
