@@ -165,9 +165,10 @@
                                         "We trade one villain for another..."
                                         "There’ll be another time..."
                                         "Just one more package..."))
-    (setq dashboard-items '((recents  . 15)
-                            (projects . 10)
-                            (agenda   . 10)))
+    (setq dashboard-items '((recents   . 5)
+                            (bookmarks . 10)
+                            (projects  . 10)
+                            (agenda    . 10)))
     (dashboard-setup-startup-hook))
 #+END_SRC
 
