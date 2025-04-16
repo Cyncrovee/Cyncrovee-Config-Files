@@ -206,30 +206,41 @@
 #+END_SRC
 ** Set keymaps
 #+BEGIN_SRC elisp
-  (evil-set-leader 'normal (kbd "SPC"))
-  (define-key evil-normal-state-map (kbd "<leader> SPC") 'execute-extended-command)
-  (define-key evil-normal-state-map (kbd "<leader> w") 'evil-write)
-  (define-key evil-normal-state-map (kbd "<leader> ll") 'evil-avy-goto-line)
-  (define-key evil-normal-state-map (kbd "<leader> la") 'evil-avy-goto-line-above)
-  (define-key evil-normal-state-map (kbd "<leader> lb") 'evil-avy-goto-line-below)
-  (define-key evil-normal-state-map (kbd "<leader> c") 'evil-avy-goto-char)
-  (keymap-global-set "C-k" 'windmove-up)    ; Move to the above window
-  (keymap-global-set "C-j" 'windmove-down)  ; Move to the below window
-  (keymap-global-set "C-h" 'windmove-left)  ; Move to the left window
-  (keymap-global-set "C-l" 'windmove-right) ; Move to the right window
-  (keymap-global-set "C-c h" 'next-buffer)                ; Move to the next buffer
-  (keymap-global-set "C-c l" 'previous-buffer)            ; Move to the previous buffer
-  (keymap-global-set "C-c d b" 'dashboard-open)           ; Open/refresh the dashboard
-  (keymap-global-set "C-c d i" 'projectile-dired)         ; Open/refresh the dashboard
-  (keymap-global-set "C-c n" 'newsticker-show-news)       ; Show newsticker feeds
-  (keymap-global-set "C-c g" 'centaur-tabs--groups-menu)  ; Open the centaur-tabs group menu
-  (keymap-global-set "C-c k" 'kill-this-buffer)           ; Kill the current buffer
-  (keymap-global-set "C-c f" 'lsp-format-buffer)          ; Format the current buffer via the LSP
-  (keymap-global-set "C-c i" 'org-indent-mode)            ; Enter org indent mode
-  (keymap-global-set "C-c e" 'embark-act)                 ; Call embark
-  (keymap-global-set "C-c t" 'treemacs)                   ; Opens the treemacs file tree
-  (keymap-global-set "C-c o" 'org-agenda)                 ; Open the org agenda
-  (keymap-global-set "C-c x" 'org-agenda-exit)            ; Close the org agenda
-  (keymap-global-set "C-c b m" 'buffer-menu)              ; Open the buffer menu
-  (keymap-global-set "C-c b i" 'ibuffer)                  ; Open the buffer menu
+  (evil-set-leader 'normal (kbd "SPC")) ;; Set evil leader key to space
+  ;; General
+  (define-key evil-normal-state-map (kbd "<leader> SPC") 'execute-extended-command) ; Open command minibuffer
+  (define-key evil-normal-state-map (kbd "<leader> db") 'dashboard-open)            ; Open/refresh the dashboard
+  (define-key evil-normal-state-map (kbd "<leader> ew") 'evil-write)                ; Write to (save) file
+  ;; Windows (SPC w...)
+  (define-key evil-normal-state-map (kbd "<leader> wk") 'windmove-up)               ; Move to the above window
+  (define-key evil-normal-state-map (kbd "<leader> wj") 'windmove-down)             ; Move to the below window
+  (define-key evil-normal-state-map (kbd "<leader> wh") 'windmove-left)             ; Move to the left window
+  (define-key evil-normal-state-map (kbd "<leader> wl") 'windmove-right)            ; Move to the right window
+  (define-key evil-normal-state-map (kbd "<leader> wt") 'treemacs)                  ; Opens/closes the treemacs file tree
+  (define-key evil-normal-state-map (kbd "<leader> wsh") 'evil-window-split)        ; Split the window horizontally
+  (define-key evil-normal-state-map (kbd "<leader> wsv") 'evil-window-vsplit)       ; Split the window vertically
+  ;; Evil-avy (SPC a...)
+  (define-key evil-normal-state-map (kbd "<leader> all") 'evil-avy-goto-line)        ; Goto specific line
+  (define-key evil-normal-state-map (kbd "<leader> ala") 'evil-avy-goto-line-above)  ; Goto specific line above
+  (define-key evil-normal-state-map (kbd "<leader> alb") 'evil-avy-goto-line-below)  ; Goto specific line below
+  (define-key evil-normal-state-map (kbd "<leader> ac") 'evil-avy-goto-char)         ; Goto specific char
+  ;; Buffers (SPC b...)
+  (define-key evil-normal-state-map (kbd "<leader> bn") 'next-buffer)               ; Move to the next buffer
+  (define-key evil-normal-state-map (kbd "<leader> bp") 'previous-buffer)           ; Move to the previous buffer
+  (define-key evil-normal-state-map (kbd "<leader> bk") 'kill-this-buffer)          ; Kill the current buffer
+  (define-key evil-normal-state-map (kbd "<leader> bi") 'ibuffer)                   ; Open the ibuffer menu
+  ;; Tabs (SPC t...)
+  (define-key evil-normal-state-map (kbd "<leader> tg") 'centaur-tabs--groups-menu) ; Open the centaur-tabs group menu
+  ;; Dired (SPC d...)
+  (define-key evil-normal-state-map (kbd "<leader> dp") 'projectile-dired)          ; Open dired in the current projectile project’s root
+  ;; LSP (SPC l...)
+  (define-key evil-normal-state-map (kbd "<leader> lf") 'lsp-format-buffer)         ; Format the current buffer via the LSP
+  ;; Org (SPC o...)
+  (define-key evil-normal-state-map (kbd "<leader> oi") 'org-indent-mode)           ; Enter org indent mode
+  (define-key evil-normal-state-map (kbd "<leader> oa") 'org-agenda)                ; Open the org agenda
+  (define-key evil-normal-state-map (kbd "<leader> oa") 'org-agenda-exit)           ; Close the org agenda
+  ;; Embark (SPC e...)
+  (define-key evil-normal-state-map (kbd "<leader> ea") 'embark-act)                ; Call embark
+  ;; Modes
+  (define-key evil-normal-state-map (kbd "<leader> mo") 'olivetti-mode)             ; Toggle olivetti mode
 #+END_SRC
