@@ -144,6 +144,7 @@
   :config
   (setq dashboard-center-content t)
   (setq dashboard-vertically-center-content t)
+  (setq dashboard-startup-banner "~/.config/emacs/assets/Emacs-Dashboard-Banner.txt")
   (setq dashboard-footer-messages '("Change is difficult, but it’s how we grow"
                                       "It’s kind of like Vim, but not"
                                       "Technically, it’s a display editor"
