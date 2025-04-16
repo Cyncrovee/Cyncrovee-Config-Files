@@ -113,6 +113,10 @@
     :init
     (treemacs-project-follow-mode)
     (setq-default treemacs-no-png-images t))
+  (use-package olivetti
+    :ensure t
+    :init
+    (setq olivetti-body-width 190))
   (use-package centaur-tabs
     :ensure t
     :init
