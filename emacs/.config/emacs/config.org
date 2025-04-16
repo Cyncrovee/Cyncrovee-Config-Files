@@ -196,14 +196,15 @@
 #+END_SRC
 ** Set options
 #+BEGIN_SRC elisp
-  (setq-default use-short-answers t)          ; Enable the use of short answers (y/n) in yes/no prompts
-  (setq-default make-backup-files nil)        ; Disable backup files
-  (setq-default auto-save-default nil)        ; Disable auto save files
-  (setq-default create-lockfiles nil)         ; Disable lock file creation
-  (setq-default display-line-numbers-width 4) ; Set the width of the line number column
-  (setq-default tab-width 4)                  ; Set tab spaces to 4
-  (setq-default indent-tabs-mode nil)         ; Convert tabs to spaces
-  (evil-set-undo-system 'undo-redo)           ; Set up undo/redo for evil
+  (setq-default
+    use-short-answers t              ; Enable the use of short answers (y/n) in yes/no prompts
+    make-backup-files nil            ; Disable backup files
+    auto-save-default nil            ; Disable auto save files
+    create-lockfiles nil             ; Disable lock file creation
+    display-line-numbers-width 4     ; Set the width of the line number column
+    tab-width 4                      ; Set tab spaces to 4
+    indent-tabs-mode nil)             ; Convert tabs to spaces
+  (evil-set-undo-system 'undo-redo)  ; Set up undo/redo for evil
 #+END_SRC
 ** Set keymaps
 #+BEGIN_SRC elisp
