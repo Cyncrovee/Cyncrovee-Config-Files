@@ -244,4 +244,8 @@
   (define-key evil-normal-state-map (kbd "<leader> ea") 'embark-act)                ; Call embark
   ;; Modes
   (define-key evil-normal-state-map (kbd "<leader> mo") 'olivetti-mode)             ; Toggle olivetti mode
+
+  ;; Use C-tab and C-shift-tab to navigate buffers
+  (keymap-global-set "C-<tab>" 'centaur-tabs-forward)
+  (keymap-global-set "C-<iso-lefttab>" 'centaur-tabs-backward)
 #+END_SRC
