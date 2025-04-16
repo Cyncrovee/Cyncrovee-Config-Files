@@ -5,6 +5,7 @@ transient/
 tree-sitter/
 newsticker/
 auto-save-list/
+emms/
 .cache/
 session.*
 wget-log*
