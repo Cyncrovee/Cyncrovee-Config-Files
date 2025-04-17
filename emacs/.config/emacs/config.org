@@ -18,6 +18,55 @@
   :ensure t)
 #+END_SRC
 ** ELPA Packages
+*** Buffer Completion
+- Company
+- Corfu (See: https://github.com/minad/corfu, GPL-3.0, changes made)
+- Cape
+#+BEGIN_SRC elisp
+;; Company
+(defun use-company-completion ()
+  (use-package company
+    :ensure t
+    :init
+    (global-company-mode)
+    (setq company-minimum-prefix-length 1)
+    (setq company-idle-delay 0)
+    (global-company-mode)
+    (company-tng-mode)))
+
+(defun use-corfu-completion ()
+  (use-package corfu
+    :ensure t
+    :custom
+    (corfu-cycle t)
+    :bind
+    (:map corfu-map
+          ("TAB"     . corfu-next)
+          ([tab]     . corfu-next)
+          ("S-TAB"   . corfu-previous)
+          ([backtab] . corfu-previous))
+    :init
+    (setq corfu-auto        t
+          corfu-auto-delay  0.5
+          corfu-auto-prefix 1)
+    (global-corfu-mode)
+    (corfu-echo-mode)
+    (corfu-indexed-mode)
+    :hook
+    ((global-corfu-mode) . (lambda()
+                             (setq-local completion-styles '(orderless-fast basic)
+                                         completion-category-overrides nil
+                                         completion-category-defaults nil))))
+  (use-package cape
+    :ensure t
+    :hook
+    ((completion-at-point-functions) . cape-file)))
+
+;; If you want corfu/cape, replace this with with (use-corfu-completion)
+;; I’m currently not using corfu due to some issues with this configuration
+(use-company-completion)
+#+END_SRC
+*** General
 - Magit
 - Flycheck
 - Embark
@@ -25,8 +74,6 @@
 - Projectile
 - Indent-Bars (See: https://github.com/jdtsmith/indent-bars, GPL-3.0, changes made)
 - Evil (See: https://github.com/emacs-evil/evil & https://github.com/emacs-evil/evil-collection, both GPL-3.0)
-- Corfu (See: https://github.com/minad/corfu, GPL-3.0, changes made)
-- Cape
 - Vertico
 - Marginalia
 - Orderless (See: https://github.com/oantolin/orderless, GPL-3.0)
@@ -66,35 +113,6 @@
   (evil-mode)
   :config
   (evil-set-undo-system 'undo-redo))
-(use-package corfu
-  :ensure t
-  :custom
-  (corfu-cycle t)
-  :bind
-  (:map corfu-map
-        ("TAB"     . corfu-next)
-        ([tab]     . corfu-next)
-        ("S-TAB"   . corfu-previous)
-        ([backtab] . corfu-previous))
-  :init
-  (setq corfu-auto        t
-        corfu-auto-delay  0
-        corfu-auto-prefix 0)
-  (global-corfu-mode)
-  (corfu-echo-mode)
-  (corfu-indexed-mode)
-  :hook
-  ((global-corfu-mode) . (lambda()
-                           (setq-local completion-styles '(orderless-fast basic)
-                                       completion-category-overrides nil
-                                       completion-category-defaults nil))))
-(use-package cape
-  :ensure t
-  :hook
-  ((completion-at-point-functions) . cape-file)
-  ((completion-at-point-functions) . cape-keyword)
-  ((completion-at-point-functions) . cape-elisp-block)
-  ((completion-at-point-functions) . cape-elisp-symbol))
 (use-package vertico
   :ensure t
   :init
