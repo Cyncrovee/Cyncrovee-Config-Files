@@ -25,7 +25,8 @@
 - Projectile
 - Indent-Bars (See: https://github.com/jdtsmith/indent-bars, GPL-3.0, changes made)
 - Evil (See: https://github.com/emacs-evil/evil & https://github.com/emacs-evil/evil-collection, both GPL-3.0)
-- Company
+- Corfu (See: https://github.com/minad/corfu, GPL-3.0, changes made)
+- Cape
 - Vertico
 - Marginalia
 - Orderless (See: https://github.com/oantolin/orderless, GPL-3.0)
@@ -61,13 +62,6 @@
     (evil-mode)
     :config
     (evil-set-undo-system 'undo-redo))
-  (use-package company
-    :ensure t
-    :init
-    (setq-default company-minimum-prefix-length 1)
-    (setq-default company-idle-delay 0)
-    (global-company-mode)
-    (company-tng-mode))
   (use-package vertico
     :ensure t
     :init
@@ -81,6 +75,35 @@
     :custom
     (completion-styles '(orderless basic))
     (completion-category-overrides '((file (styles basic partial-completion)))))
+(use-package corfu
+  :ensure t
+  :custom
+  (corfu-cycle t)
+  :bind
+  (:map corfu-map
+        ("TAB"     . corfu-next)
+        ([tab]     . corfu-next)
+        ("S-TAB"   . corfu-previous)
+        ([backtab] . corfu-previous))
+  :init
+  (setq corfu-auto        t
+        corfu-auto-delay  0
+        corfu-auto-prefix 0)
+  (global-corfu-mode)
+  (corfu-echo-mode)
+  (corfu-indexed-mode)
+  :hook
+  ((global-corfu-mode) . (lambda()
+                           (setq-local completion-styles '(orderless-fast basic)
+                                       completion-category-overrides nil
+                                       completion-category-defaults nil))))
+(use-package cape
+  :ensure t
+  :hook
+  ((completion-at-point-functions) . cape-file)
+  ((completion-at-point-functions) . cape-keyword)
+  ((completion-at-point-functions) . cape-elisp-block)
+  ((completion-at-point-functions) . cape-elisp-symbol))
 #+END_SRC
 
 * Package Managment (MELPA)
