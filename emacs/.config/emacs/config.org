@@ -119,7 +119,8 @@
   (use-package olivetti
     :ensure t
     :init
-    (setq olivetti-body-width 190))
+    (setq olivetti-body-width 190)
+    :hook (eww-mode))
   (use-package centaur-tabs
     :ensure t
     :init
