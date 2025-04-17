@@ -58,7 +58,9 @@
     :ensure t
     :init
     (setq evil-want-keybinding nil)
-    (evil-mode))
+    (evil-mode)
+    :config
+    (evil-set-undo-system 'undo-redo))
   (use-package company
     :ensure t
     :init
@@ -200,7 +202,6 @@
     display-line-numbers-width 4     ; Set the width of the line number column
     tab-width 4                      ; Set tab spaces to 4
     indent-tabs-mode nil)             ; Convert tabs to spaces
-  (evil-set-undo-system 'undo-redo)  ; Set up undo/redo for evil
 #+END_SRC
 ** Set keymaps
 #+BEGIN_SRC elisp
