@@ -105,7 +105,8 @@
 - Dashboard (See https://github.com/emacs-dashboard/emacs-dashboard, GPL-3.0, changes made)
 #+BEGIN_SRC elisp
   (use-package rainbow-delimiters
-    :ensure t)
+    :ensure t
+    :hook (lsp-mode emacs-lisp-mode))
   (use-package crux
     :ensure t)
   (use-package treemacs
@@ -188,11 +189,6 @@
   (electric-pair-mode)                           ; Automatically close parens
   (electric-quote-mode)                          ; Automatically close quotes
   (windmove-mode)                                ; Easier window switching
-#+END_SRC
-** Make hooks
-#+BEGIN_SRC elisp
-  (add-hook 'lsp-mode-hook 'rainbow-delimiters-mode)
-  (add-hook 'org-mode-hook 'rainbow-delimiters-mode)
 #+END_SRC
 ** Set options
 #+BEGIN_SRC elisp
