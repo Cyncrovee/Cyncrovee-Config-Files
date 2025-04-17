@@ -266,19 +266,19 @@
 (evil-global-set-key 'normal (kbd "<leader> eqq") 'evil-quit)     ; Call evil-quit
 (evil-global-set-key 'normal (kbd "<leader> eqa") 'evil-quit-all) ; Quit all, likely exiting emacs
 ;; Windows (SPC w...)
-(evil-global-set-key 'normal (kbd "<leader> wk") 'windmove-up)          ; Move to the above window
-(evil-global-set-key 'normal (kbd "<leader> wj") 'windmove-down)        ; Move to the below window
-(evil-global-set-key 'normal (kbd "<leader> wh") 'windmove-left)        ; Move to the left window
-(evil-global-set-key 'normal (kbd "<leader> wl") 'windmove-right)       ; Move to the right window
-(evil-global-set-key 'normal (kbd "<leader> ww") 'ace-window)           ; Call ace window
-(evil-global-set-key 'normal (kbd "<leader> wo") 'delete-other-windows) ; Call ace window
-(evil-global-set-key 'normal (kbd "<leader> wsh") 'evil-window-split)   ; Split the window horizontally
-(evil-global-set-key 'normal (kbd "<leader> wsv") 'evil-window-vsplit)  ; Split the window vertically
+(evil-global-set-key 'normal (kbd "<leader> wk") 'windmove-up)                ; Move to the above window
+(evil-global-set-key 'normal (kbd "<leader> wj") 'windmove-down)              ; Move to the below window
+(evil-global-set-key 'normal (kbd "<leader> wh") 'windmove-left)              ; Move to the left window
+(evil-global-set-key 'normal (kbd "<leader> wl") 'windmove-right)             ; Move to the right window
+(evil-global-set-key 'normal (kbd "<leader> ww") 'ace-window)                 ; Call ace window
+(evil-global-set-key 'normal (kbd "<leader> wo") 'delete-other-windows)       ; Call ace window
+(evil-global-set-key 'normal (kbd "<leader> wsh") 'evil-window-split)         ; Split the window horizontally
+(evil-global-set-key 'normal (kbd "<leader> wsv") 'evil-window-vsplit)        ; Split the window vertically
 ;; Evil-avy (SPC a...)
+(evil-global-set-key 'normal (kbd "<leader> ac") 'evil-avy-goto-char)        ; Goto specific char
 (evil-global-set-key 'normal (kbd "<leader> all") 'evil-avy-goto-line)       ; Goto specific line
 (evil-global-set-key 'normal (kbd "<leader> ala") 'evil-avy-goto-line-above) ; Goto specific line above
 (evil-global-set-key 'normal (kbd "<leader> alb") 'evil-avy-goto-line-below) ; Goto specific line below
-(evil-global-set-key 'normal (kbd "<leader> ac") 'evil-avy-goto-char)        ; Goto specific char
 ;; Buffers and tabs (SPC b...)
 (evil-global-set-key 'normal (kbd "<leader> bn") 'next-buffer)               ; Move to the next buffer
 (evil-global-set-key 'normal (kbd "<leader> bp") 'previous-buffer)           ; Move to the previous buffer
@@ -286,8 +286,10 @@
 (evil-global-set-key 'normal (kbd "<leader> bi") 'ibuffer)                   ; Open the ibuffer menu
 (evil-global-set-key 'normal (kbd "<leader> bg") 'centaur-tabs--groups-menu) ; Open the centaur-tabs group menu
 ;; Treemacs (SPC t...)
-(evil-global-set-key 'normal (kbd "<leader> tm") 'treemacs)        ; Open/close the treemacs file tree
-(evil-global-set-key 'normal (kbd "<leader> td") 'treemacs-delete) ; Delete the treemacs node (file or directory) at point
+(evil-global-set-key 'normal (kbd "<leader> tm") 'treemacs)              ; Open/close the treemacs file tree
+(evil-global-set-key 'normal (kbd "<leader> td") 'treemacs-delete-file)  ; Delete the treemacs node (file or directory) at point
+(evil-global-set-key 'normal (kbd "<leader> tcf") 'treemacs-create-file) ; Create a file via treemacs
+(evil-global-set-key 'normal (kbd "<leader> tcd") 'treemacs-create-dir)  ; Create a directory via treemacs
 ;; Dired (SPC d...)
 (evil-global-set-key 'normal (kbd "<leader> dp") 'projectile-dired)        ; Open dired in the current projectile project’s root
 (evil-global-set-key 'normal (kbd "<leader> df") 'dired-create-empty-file) ; Create a file with dired
@@ -299,8 +301,12 @@
 (evil-global-set-key 'normal (kbd "<leader> oa") 'org-agenda-exit) ; Close the org agenda
 ;; Embark (SPC e...)
 (evil-global-set-key 'normal (kbd "<leader> ea") 'embark-act) ; Call embark
+;; Rustic
+(evil-global-set-key 'normal (kbd "<leader> rr") 'rustic-cargo-run) ; Run Rust program with cargo
+(evil-global-set-key 'normal (kbd "<leader> rc") 'rustic-cargo-clean) ; Clean Rust target directory
 ;; Modes
-(evil-global-set-key 'normal (kbd "<leader> mo") 'olivetti-mode) ; Toggle olivetti mode
+(evil-global-set-key 'normal (kbd "<leader> mo") 'olivetti-mode)   ; Toggle olivetti mode
+(evil-global-set-key 'normal (kbd "<leader> me") 'emacs-lisp-mode) ; Toggle emacs-lisp-mode mode
 
 ;; Use C-tab and C-shift-tab to navigate buffers
 (keymap-global-set "C-<tab>" 'centaur-tabs-forward)
