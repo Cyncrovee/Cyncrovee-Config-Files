@@ -214,14 +214,15 @@
   (evil-global-set-key 'normal (kbd "<leader> eqq") 'evil-quit)     ; Write to (save) file
   (evil-global-set-key 'normal (kbd "<leader> eqa") 'evil-quit-all) ; Write to (save) file
   ;; Windows (SPC w...)
-  (evil-global-set-key 'normal (kbd "<leader> wk") 'windmove-up)         ; Move to the above window
-  (evil-global-set-key 'normal (kbd "<leader> wj") 'windmove-down)       ; Move to the below window
-  (evil-global-set-key 'normal (kbd "<leader> wh") 'windmove-left)       ; Move to the left window
-  (evil-global-set-key 'normal (kbd "<leader> wl") 'windmove-right)      ; Move to the right window
-  (evil-global-set-key 'normal (kbd "<leader> wo") 'ace-window)          ; Call ace window
-  (evil-global-set-key 'normal (kbd "<leader> wt") 'treemacs)            ; Opens/closes the treemacs file tree
-  (evil-global-set-key 'normal (kbd "<leader> wsh") 'evil-window-split)  ; Split the window horizontally
-  (evil-global-set-key 'normal (kbd "<leader> wsv") 'evil-window-vsplit) ; Split the window vertically
+  (evil-global-set-key 'normal (kbd "<leader> wk") 'windmove-up)          ; Move to the above window
+  (evil-global-set-key 'normal (kbd "<leader> wj") 'windmove-down)        ; Move to the below window
+  (evil-global-set-key 'normal (kbd "<leader> wh") 'windmove-left)        ; Move to the left window
+  (evil-global-set-key 'normal (kbd "<leader> wl") 'windmove-right)       ; Move to the right window
+  (evil-global-set-key 'normal (kbd "<leader> ww") 'ace-window)           ; Call ace window
+  (evil-global-set-key 'normal (kbd "<leader> wo") 'delete-other-windows) ; Call ace window
+  (evil-global-set-key 'normal (kbd "<leader> wt") 'treemacs)             ; Opens/closes the treemacs file tree
+  (evil-global-set-key 'normal (kbd "<leader> wsh") 'evil-window-split)   ; Split the window horizontally
+  (evil-global-set-key 'normal (kbd "<leader> wsv") 'evil-window-vsplit)  ; Split the window vertically
   ;; Evil-avy (SPC a...)
   (evil-global-set-key 'normal (kbd "<leader> all") 'evil-avy-goto-line)       ; Goto specific line
   (evil-global-set-key 'normal (kbd "<leader> ala") 'evil-avy-goto-line-above) ; Goto specific line above
