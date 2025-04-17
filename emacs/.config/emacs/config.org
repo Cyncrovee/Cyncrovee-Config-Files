@@ -255,6 +255,15 @@
  tab-width 4                      ; Set tab spaces to 4
  indent-tabs-mode nil)             ; Convert tabs to spaces
 #+END_SRC
+** Custom Functions
+#+BEGIN_SRC elisp
+(defun open-magit-status-window ()
+  "Open a lone, clean magit status window"
+  (interactive)
+  (magit-status)
+  (delete-other-windows)
+  (olivetti-mode))
+#+END_SRC
 ** Set keymaps
 #+BEGIN_SRC elisp
 (evil-set-leader 'normal (kbd "SPC")) ;; Set evil leader key to space
@@ -274,6 +283,7 @@
 (evil-global-set-key 'normal (kbd "<leader> wo") 'delete-other-windows)       ; Call ace window
 (evil-global-set-key 'normal (kbd "<leader> wsh") 'evil-window-split)         ; Split the window horizontally
 (evil-global-set-key 'normal (kbd "<leader> wsv") 'evil-window-vsplit)        ; Split the window vertically
+(evil-global-set-key 'normal (kbd "<leader> wg") 'open-magit-status-window)  ; Open a lone, clean magit status window
 ;; Evil-avy (SPC a...)
 (evil-global-set-key 'normal (kbd "<leader> ac") 'evil-avy-goto-char)        ; Goto specific char
 (evil-global-set-key 'normal (kbd "<leader> all") 'evil-avy-goto-line)       ; Goto specific line
