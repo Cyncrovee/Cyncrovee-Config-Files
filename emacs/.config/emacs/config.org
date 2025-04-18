@@ -86,6 +86,12 @@
   :ensure t)
 (use-package avy
   :ensure t)
+(use-package embark-consult
+  :ensure t)
+(use-package consult
+  :ensure t
+  :init
+  (consult-preview-at-point-mode))
 (use-package beacon
   :ensure t
   :init
@@ -311,10 +317,12 @@
 (evil-global-set-key 'normal (kbd "<leader> oa") 'org-agenda-exit) ; Close the org agenda
 ;; Embark (SPC e...)
 (evil-global-set-key 'normal (kbd "<leader> ea") 'embark-act) ; Call embark
-;; Rustic
+;; Consult (SPC c...)
+(evil-global-set-key 'normal (kbd "<leader> cl") 'consult-line) ;
+;; Rustic (SPC r...)
 (evil-global-set-key 'normal (kbd "<leader> rr") 'rustic-cargo-run) ; Run Rust program with cargo
 (evil-global-set-key 'normal (kbd "<leader> rc") 'rustic-cargo-clean) ; Clean Rust target directory
-;; Modes
+;; Modes (SPC m...)
 (evil-global-set-key 'normal (kbd "<leader> mo") 'olivetti-mode)   ; Toggle olivetti mode
 (evil-global-set-key 'normal (kbd "<leader> me") 'emacs-lisp-mode) ; Toggle emacs-lisp-mode mode
 
