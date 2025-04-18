@@ -12,16 +12,16 @@
 
 * Package Managment (ELPA)
 ** ELPA Themes(s)
-- Modus-Themes
+- Modus Themes (See: https://github.com/protesilaos/modus-themes, GPL-3.0)
 #+BEGIN_SRC elisp
 (use-package modus-themes
   :ensure t)
 #+END_SRC
 ** ELPA Packages
 *** Buffer Completion
-- Company
+- Company (See: https://github.com/company-mode/company-mode, GPL-3.0)
 - Corfu (See: https://github.com/minad/corfu, GPL-3.0, changes made)
-- Cape
+- Cape (See: https://github.com/minad/cape, GPL-3.0)
 #+BEGIN_SRC elisp
 ;; Company
 (defun use-company-completion ()
@@ -67,15 +67,20 @@
 (use-company-completion)
 #+END_SRC
 *** General
-- Magit
-- Flycheck
-- Embark
-- Org (Mode)
-- Projectile
-- Indent-Bars (See: https://github.com/jdtsmith/indent-bars, GPL-3.0, changes made)
+- Magit (See: https://github.com/magit/magit, GPL-3.0)
+- Flycheck (See: https://github.com/flycheck/flycheck, GPL-3.0)
+- Embark-Consult (See: https://github.com/embark/embark, GPL-3.0)
+- Embark (See: https://github.com/embark/embark, GPL-3.0)
+- Avy (See: https://github.com/abo-abo/avy, GPL-3.0)
+- Consult (See: https://github.com/minad/consult, GPL-3.0)
+- Beacon (See: https://github.com/Malabarba/beacon, GPL-3.0)
+- Diff-HL (See: https://github.com/dgutov/diff-hl, GPL-3.0)
+- Org (Mode) (See: https://git.savannah.gnu.org/cgit/emacs/org-mode.git, GPL-3.0)
+- Projectile (See: https://github.com/bbastov/projectile, GPL-3.0)
+- Indent-Bars (See: https://github.com/jdtsmith/indent-bars, GPL-3.0, changes made) 
 - Evil (See: https://github.com/emacs-evil/evil & https://github.com/emacs-evil/evil-collection, both GPL-3.0)
-- Vertico
-- Marginalia
+- Vertico (See: https://github.com/minad/vertico, GPL-3.0)
+- Marginalia (See: https://github.com/minad/marginalia, GPL-3.0)
 - Orderless (See: https://github.com/oantolin/orderless, GPL-3.0)
 #+BEGIN_SRC elisp
 (use-package magit
@@ -142,20 +147,23 @@
 (add-to-list 'package-archives '("melpa" . "https://stable.melpa.org/packages/") t)
 #+END_SRC
 ** MELPA Theme(s)
-- Doom-Themes
+- Doom-Themes (See: https://github.com/doomemacs/themes, MIT License)
 #+BEGIN_SRC elisp
 (use-package doom-themes
   :ensure t)
 #+END_SRC
 ** MELPA Packages
-- Treemacs (See https://github.com/Alexander-Miller/treemacs, GPL-3.0, changes made)
-- Centaur-Tabs (See https://github.com/ema2159/centaur-tabs, GPL-3.0, changes made)
-- LSP-Mode See: (https://github.com/emacs-lsp/lsp-mode, GPL-3.0, changes made)
-- LSP-UI
+- Rainbow Delimiters (See: https://github.com/Fanael/rainbow-delimiters, GPL-3.0)
+- Crux (See: https://github.com/bbastov/crux, GPL-3.0)
+- Olivetti (See: https://github.com/rnkn/olivetti, GPL-3.0)
+- Treemacs (See: https://github.com/Alexander-Miller/treemacs, GPL-3.0, changes made)
+- Centaur-Tabs (See: https://github.com/ema2159/centaur-tabs, GPL-3.0, changes made)
+- LSP-Mode (See: https://github.com/emacs-lsp/lsp-mode, GPL-3.0, changes made)
+- LSP-UI (See: https://github.com/emacs-lsp/lsp-ui, GPL-3.0)
 - Evil-Collection (See: https://github.com/emacs-evil/evil & https://github.com/emacs-evil/evil-collection, both GPL-3.0, changes made)
-- Rustic
-- Doom-Modeline
-- Dashboard (See https://github.com/emacs-dashboard/emacs-dashboard, GPL-3.0, changes made)
+- Rustic (See: https://github.com/emacs-rustic/rustic, Apache-2.0 AND MIT)
+- Doom-Modeline (See: https://github.com/seagle0128/doom-modeline, GPL-3.0)
+- Dashboard (See: https://github.com/emacs-dashboard/emacs-dashboard, GPL-3.0, changes made)
 #+BEGIN_SRC elisp
 (use-package rainbow-delimiters
   :ensure t
