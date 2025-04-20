@@ -337,6 +337,7 @@
 (evil-global-set-key 'normal (kbd "<leader> ea") 'embark-act) ; Call embark
 ;; Consult (SPC c...)
 (evil-global-set-key 'normal (kbd "<leader> cl") 'consult-line) ;
+(evil-global-set-key 'normal (kbd "<leader> ch") 'consult-org-heading) ; Use consult to go to a specific org heading
 ;; Rustic (SPC r...)
 (evil-global-set-key 'normal (kbd "<leader> rr") 'rustic-cargo-run) ; Run Rust program with cargo
 (evil-global-set-key 'normal (kbd "<leader> rc") 'rustic-cargo-clean) ; Clean Rust target directory
