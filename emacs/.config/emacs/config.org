@@ -294,20 +294,20 @@
 (evil-global-set-key 'normal (kbd "<leader> db") 'dashboard-open)            ; Open/refresh the dashboard
 (evil-global-set-key 'normal (kbd "<leader> bw") 'eww)                       ; Open the emacs web browser
 ;; Evil
-(evil-global-set-key 'normal (kbd "<leader> ew") 'evil-write)     ; Write to (save) file
-(evil-global-set-key 'normal (kbd "<leader> eqq") 'evil-quit)     ; Call evil-quit
-(evil-global-set-key 'normal (kbd "<leader> eqa") 'evil-quit-all) ; Quit all, likely exiting emacs
+(evil-global-set-key 'normal (kbd "<leader> eww") 'evil-write)      ; Write to (save) file
 (evil-global-set-key 'normal (kbd "<leader> ewq") 'evil-write-quit) ; Write to (save) file, then quit the current window
+(evil-global-set-key 'normal (kbd "<leader> eqq") 'evil-quit)       ; Quit the current window
+(evil-global-set-key 'normal (kbd "<leader> eqa") 'evil-quit-all)   ; Quit all, likely exiting emacs
 ;; Windows (SPC w...)
-(evil-global-set-key 'normal (kbd "<leader> wk") 'windmove-up)                ; Move to the above window
-(evil-global-set-key 'normal (kbd "<leader> wj") 'windmove-down)              ; Move to the below window
-(evil-global-set-key 'normal (kbd "<leader> wh") 'windmove-left)              ; Move to the left window
-(evil-global-set-key 'normal (kbd "<leader> wl") 'windmove-right)             ; Move to the right window
-(evil-global-set-key 'normal (kbd "<leader> ww") 'ace-window)                 ; Call ace window
-(evil-global-set-key 'normal (kbd "<leader> wo") 'delete-other-windows)       ; Call ace window
-(evil-global-set-key 'normal (kbd "<leader> wsh") 'evil-window-split)         ; Split the window horizontally
-(evil-global-set-key 'normal (kbd "<leader> wsv") 'evil-window-vsplit)        ; Split the window vertically
-(evil-global-set-key 'normal (kbd "<leader> wg") 'open-magit-status-window)  ; Open a lone, clean magit status window
+(evil-global-set-key 'normal (kbd "<leader> wk") 'windmove-up)              ; Move to the above window
+(evil-global-set-key 'normal (kbd "<leader> wj") 'windmove-down)            ; Move to the below window
+(evil-global-set-key 'normal (kbd "<leader> wh") 'windmove-left)            ; Move to the left window
+(evil-global-set-key 'normal (kbd "<leader> wl") 'windmove-right)           ; Move to the right window
+(evil-global-set-key 'normal (kbd "<leader> ww") 'ace-window)               ; Call ace window
+(evil-global-set-key 'normal (kbd "<leader> wo") 'delete-other-windows)     ; Delete all windows except the current one
+(evil-global-set-key 'normal (kbd "<leader> wsh") 'evil-window-split)       ; Split the window horizontally
+(evil-global-set-key 'normal (kbd "<leader> wsv") 'evil-window-vsplit)      ; Split the window vertically
+(evil-global-set-key 'normal (kbd "<leader> wg") 'open-magit-status-window) ; Open a lone, clean magit status window
 ;; Evil-avy (SPC a...)
 (evil-global-set-key 'normal (kbd "<leader> ac") 'evil-avy-goto-char)        ; Goto specific char
 (evil-global-set-key 'normal (kbd "<leader> all") 'evil-avy-goto-line)       ; Goto specific line
@@ -336,10 +336,10 @@
 ;; Embark (SPC e...)
 (evil-global-set-key 'normal (kbd "<leader> ea") 'embark-act) ; Call embark
 ;; Consult (SPC c...)
-(evil-global-set-key 'normal (kbd "<leader> cl") 'consult-line) ;
+(evil-global-set-key 'normal (kbd "<leader> cl") 'consult-line)        ; Use consult to go to a specific line
 (evil-global-set-key 'normal (kbd "<leader> ch") 'consult-org-heading) ; Use consult to go to a specific org heading
 ;; Rustic (SPC r...)
-(evil-global-set-key 'normal (kbd "<leader> rr") 'rustic-cargo-run) ; Run Rust program with cargo
+(evil-global-set-key 'normal (kbd "<leader> rr") 'rustic-cargo-run)   ; Run Rust program with cargo
 (evil-global-set-key 'normal (kbd "<leader> rc") 'rustic-cargo-clean) ; Clean Rust target directory
 ;; Modes (SPC m...)
 (evil-global-set-key 'normal (kbd "<leader> mo") 'olivetti-mode)   ; Toggle olivetti mode
