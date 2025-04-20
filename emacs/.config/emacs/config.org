@@ -1,6 +1,11 @@
 #+TITLE: Emacs Configuration
 #+AUTHOR: Cyncrovee
 #+DESCRIPTION: My emacs configuration, the file format is .org however it should be able to be parsed and applied to emacs via org-babel
+#+STARTUP: indent
+
+* Initial Notes
+- My emacs configuration, the file format is .org however it should be able to be parsed and applied to emacs via org-babel.
+- If the licenses for any of these package change, feel free to open an issue.
 
 * Setup use-package
 - See: https://github.com/jwiegley/use-package, GPL-3.0
