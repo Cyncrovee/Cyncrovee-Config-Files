@@ -332,7 +332,7 @@
 ;; Org (SPC o...)
 (evil-global-set-key 'normal (kbd "<leader> oi") 'org-indent-mode) ; Enter org indent mode
 (evil-global-set-key 'normal (kbd "<leader> oa") 'org-agenda)      ; Open the org agenda
-(evil-global-set-key 'normal (kbd "<leader> oa") 'org-agenda-exit) ; Close the org agenda
+(evil-global-set-key 'normal (kbd "<leader> oe") 'org-agenda-exit) ; Close the org agenda
 ;; Embark (SPC e...)
 (evil-global-set-key 'normal (kbd "<leader> ea") 'embark-act) ; Call embark
 ;; Consult (SPC c...)
