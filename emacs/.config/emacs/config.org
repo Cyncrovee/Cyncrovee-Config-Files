@@ -261,16 +261,16 @@
 (electric-quote-mode)                          ; Automatically close quotes
 (windmove-mode)                                ; Easier window switching
 #+END_SRC
-** Set options
+** Set Options
 #+BEGIN_SRC elisp
 (setq-default
- use-short-answers t              ; Enable the use of short answers (y/n) in yes/no prompts
- make-backup-files nil            ; Disable backup files
- auto-save-default nil            ; Disable auto save files
- create-lockfiles nil             ; Disable lock file creation
- display-line-numbers-width 4     ; Set the width of the line number column
- tab-width 4                      ; Set tab spaces to 4
- indent-tabs-mode nil)             ; Convert tabs to spaces
+ use-short-answers t          ; Enable the use of short answers (y/n) in yes/no prompts
+ make-backup-files nil        ; Disable backup files
+ auto-save-default nil        ; Disable auto save files
+ create-lockfiles nil         ; Disable lock file creation
+ display-line-numbers-width 4 ; Set the width of the line number column
+ tab-width 4                  ; Set tab spaces to 4
+ indent-tabs-mode nil)        ; Convert tabs to spaces
 #+END_SRC
 ** Custom Functions
 #+BEGIN_SRC elisp
