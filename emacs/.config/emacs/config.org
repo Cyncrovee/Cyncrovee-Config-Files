@@ -292,6 +292,7 @@
 ;; General
 (evil-global-set-key 'normal (kbd "<leader> SPC") 'execute-extended-command) ; Open command minibuffer
 (evil-global-set-key 'normal (kbd "<leader> db") 'dashboard-open)            ; Open/refresh the dashboard
+(evil-global-set-key 'normal (kbd "<leader> bw") 'eww)                       ; Open the emacs web browser
 ;; Evil
 (evil-global-set-key 'normal (kbd "<leader> ew") 'evil-write)     ; Write to (save) file
 (evil-global-set-key 'normal (kbd "<leader> eqq") 'evil-quit)     ; Call evil-quit
