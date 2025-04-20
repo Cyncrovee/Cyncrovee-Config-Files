@@ -275,7 +275,7 @@
 ** Custom Functions
 #+BEGIN_SRC elisp
 (defun open-magit-status-window ()
-  "Open a lone, clean magit status window"
+  "Open a lone, clean magit status window."
   (interactive)
   (magit-status)
   (delete-other-windows)
