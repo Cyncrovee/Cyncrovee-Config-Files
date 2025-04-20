@@ -280,6 +280,11 @@
   (magit-status)
   (delete-other-windows)
   (olivetti-mode))
+(defun evil-write-quit ()
+  "Save the current buffer, then quit the current window."
+  (interactive)
+  (evil-write)
+  (evil-quit))
 #+END_SRC
 ** Set keymaps
 #+BEGIN_SRC elisp
@@ -291,6 +296,7 @@
 (evil-global-set-key 'normal (kbd "<leader> ew") 'evil-write)     ; Write to (save) file
 (evil-global-set-key 'normal (kbd "<leader> eqq") 'evil-quit)     ; Call evil-quit
 (evil-global-set-key 'normal (kbd "<leader> eqa") 'evil-quit-all) ; Quit all, likely exiting emacs
+(evil-global-set-key 'normal (kbd "<leader> ewq") 'evil-write-quit) ; Write to (save) file, then quit the current window
 ;; Windows (SPC w...)
 (evil-global-set-key 'normal (kbd "<leader> wk") 'windmove-up)                ; Move to the above window
 (evil-global-set-key 'normal (kbd "<leader> wj") 'windmove-down)              ; Move to the below window
