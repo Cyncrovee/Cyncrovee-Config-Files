@@ -220,9 +220,13 @@
 (setq-default doom-modeline-workspace-name t)    ; Show workspace name
 (use-package dashboard
   :ensure t
-  :config
+  :init
   (setq dashboard-center-content t)
   (setq dashboard-vertically-center-content t)
+  (setq dashboard-display-icons-p t)
+  (setq dashboard-icon-type 'nerd-icons)
+  (setq dashboard-set-heading-icons t)
+  (setq dashboard-set-file-icons t)
   (setq dashboard-startup-banner "~/.config/emacs/assets/Emacs-Dashboard-Banner.txt")
   (setq dashboard-footer-messages '("Change is difficult, but it’s how we grow"
                                     "It’s kind of like Vim, but not"
