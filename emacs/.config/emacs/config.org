@@ -109,7 +109,10 @@
   :ensure t
   :init
   (setq org-todo-keywords
-        '((sequence "TODO" "ACTIVE" "INPROGRESS" "|" "DONE" "INACTIVE" "CANCELLED" "UNKNOWN"))))
+        '((sequence "TODO(t)" "INPROGRESS(p)" "|" "DONE(d)" "CANCELLED(c)" "UNKNOWN(u)")
+          (sequence "TOREAD(r)" "|" "READ(r)")
+          (sequence "TOLISTEN(l)" "|" "LISTENED(n)")
+          (sequence "ACTIVE(a)" "|" "INACTIVE(i)"))))
 (use-package projectile
   :ensure t
   :init
