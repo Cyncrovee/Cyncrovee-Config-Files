@@ -330,9 +330,10 @@
 ;; LSP (SPC l...)
 (evil-global-set-key 'normal (kbd "<leader> lf") 'lsp-format-buffer) ; Format the current buffer via the LSP
 ;; Org (SPC o...)
-(evil-global-set-key 'normal (kbd "<leader> oi") 'org-indent-mode) ; Enter org indent mode
-(evil-global-set-key 'normal (kbd "<leader> oa") 'org-agenda)      ; Open the org agenda
-(evil-global-set-key 'normal (kbd "<leader> oe") 'org-agenda-exit) ; Close the org agenda
+(evil-global-set-key 'normal (kbd "<leader> oi") 'org-indent-mode)             ; Enter org indent mode
+(evil-global-set-key 'normal (kbd "<leader> oa") 'org-agenda)                  ; Open the org agenda
+(evil-global-set-key 'normal (kbd "<leader> oe") 'org-agenda-exit)             ; Close the org agenda
+(evil-global-set-key 'normal (kbd "<leader> ot") 'org-fold-hide-drawer-toggle) ; Toggle folding of org drawers
 ;; Embark (SPC e...)
 (evil-global-set-key 'normal (kbd "<leader> ea") 'embark-act) ; Call embark
 ;; Consult (SPC c...)
