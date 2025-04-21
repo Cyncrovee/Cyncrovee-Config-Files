@@ -115,8 +115,10 @@
   :init
   (setq org-todo-keywords
         '((sequence "TODO(t)" "INPROGRESS(p)" "|" "DONE(d)" "CANCELLED(c)" "UNKNOWN(u)")
-          (sequence "TOREAD(r)" "|" "READ(r)")
-          (sequence "TOLISTEN(l)" "|" "LISTENED(n)")
+          (sequence "TOREAD(R)" "|" "READ(r)")
+          (sequence "TOLISTEN(L)" "|" "LISTENED(l)")
+          (sequence "TOBUY(B)" "|" "BOUGHT(b)")
+          (sequence "BUG(F)" "|" "FIXED(f)")
           (sequence "ACTIVE(a)" "|" "INACTIVE(i)"))))
 (use-package projectile
   :ensure t
