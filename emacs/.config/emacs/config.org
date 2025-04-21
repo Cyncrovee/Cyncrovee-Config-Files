@@ -240,6 +240,7 @@
                                     "Splash Text!"
                                     "We all lift together!"
                                     "I Give It All!"
+                                    "And his config was electric..."
                                     "What goes up..."
                                     "We trade one villain for another..."
                                     "There’ll be another time..."
