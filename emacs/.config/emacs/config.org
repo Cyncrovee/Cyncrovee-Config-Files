@@ -198,7 +198,7 @@
   (centaur-tabs-mode)
   (centaur-tabs-group-by-projectile-project)
   (setq-default centaur-tabs-style "bar")        ; Some themes have trouble with this setting, try setting the theme as safe, then restarting emacs
-  (setq-default centaur-tabs-set-bar 'left))
+  (setq-default centaur-tabs-set-bar nil))
 (use-package lsp-mode
   :ensure t
   :hook (rust-ts-mode . lsp-deferred)
