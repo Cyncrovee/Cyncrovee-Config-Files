@@ -4,6 +4,15 @@
 " Enable syntax highlighting
 syntax on
 
+" Enable loading plugins for specific file types
+filetype plugin on
+
+" Change leader key to space
+let mapleader=" "
+
+" Use nocompatible mode
+set nocompatible
+
 " Enable statusbar postition
 set ruler
 
