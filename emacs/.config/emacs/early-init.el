@@ -1,5 +1,8 @@
+;; Setup UI
 (tool-bar-mode -1)
-(menu-bar-mode -1)
-(scroll-bar-mode -1)
-(pixel-scroll-mode 1)
-(pixel-scroll-precision-mode 1)
+(tab-bar-mode)
+(menu-bar--display-line-numbers-mode-relative)
+(global-display-line-numbers-mode)
+(global-hl-line-mode)
+(column-number-mode)
+(display-time-mode)
