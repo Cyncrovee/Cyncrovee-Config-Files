@@ -99,7 +99,7 @@
 ;;; Rust
 (evil-global-set-key 'normal (kbd "<leader> rr") 'rust-run)
 ;;; Menus
-(evil-global-set-key 'normal (kbd "<leader> mb") 'buffer-menu)
+(evil-global-set-key 'normal (kbd "<leader> bm") 'buffer-menu)
 ;;; Tabs
 (evil-global-set-key 'normal (kbd "<leader> tn") 'tab-bar-new-tab)
 (evil-global-set-key 'normal (kbd "<leader> tn") 'tab-bar-new-tab)
