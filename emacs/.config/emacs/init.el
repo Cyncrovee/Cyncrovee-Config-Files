@@ -4,7 +4,7 @@
 (electric-quote-mode)
 
 ;;; Set options
-(setq-default
+(setopt
  use-short-answers t
  make-backup-files nil
  auto-save-default nil
@@ -14,12 +14,12 @@
  evil-want-keybinding nil
  inferior-lisp-program "sbcl")
 ;;; Modeline format
-(setq-default evil-mode-line-format 'before)
-(setq-default mode-line-format
-              '("%e"
-                mode-line-position
-                vc-mode
-                mode-line-modes))
+(setopt evil-mode-line-format 'before)
+(setopt mode-line-format
+        '("%e"
+          mode-line-position
+          vc-mode
+          mode-line-modes))
 
 ;;; Setup packages
 (use-package spacemacs-theme
@@ -77,7 +77,7 @@
 (use-package olivetti
   :ensure t
   :init
-  (setq olivetti-body-width 0.70))
+  (setopt olivetti-body-width 0.70))
 
 ;;; Setup Eglot
 (add-hook 'rust-mode-hook 'eglot-ensure)
