@@ -108,5 +108,5 @@
 (evil-global-set-key 'normal (kbd "<leader> tn") 'tab-bar-new-tab)
 (evil-global-set-key 'normal (kbd "<leader> tc") 'tab-bar-close-tab)
 (evil-global-set-key 'normal (kbd "<leader> to") 'tab-bar-close-other-tabs)
-;;; Olivetti
-(evil-global-set-key 'normal (kbd "<leader> om") 'olivetti-mode)
+;;; Modes
+(evil-global-set-key 'normal (kbd "<leader> mo") 'olivetti-mode)
