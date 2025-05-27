@@ -84,22 +84,30 @@
 (add-hook 'rust-mode-hook 'eglot-ensure)
 
 ;;; Setup keymaps
+;;; General
 (evil-set-leader 'normal (kbd "SPC")) ; Set leader key
 (evil-global-set-key 'normal (kbd "<leader> SPC") 'execute-extended-command) ; Double tap space for M-x functionality (I think)
 (evil-global-set-key 'normal (kbd "<leader> wo") 'other-window) ; Move to another window
+(evil-global-set-key 'normal (kbd "<leader> jl") 'join-line) ; Move to another window
 ;;; Evil
 (evil-global-set-key 'normal (kbd "<leader> ew") 'evil-write)
 (evil-global-set-key 'normal (kbd "<up>") 'evil-window-up)
 (evil-global-set-key 'normal (kbd "<down>") 'evil-window-down)
 (evil-global-set-key 'normal (kbd "<left>") 'evil-window-left)
 (evil-global-set-key 'normal (kbd "<right>") 'evil-window-right)
+;;; Magit
+(evil-global-set-key 'normal (kbd "<f9>") 'magit) ; Use magit with F9
+;; Dired
+(evil-global-set-key 'normal (kbd "<leader> dr") 'make-directory) ; Use magit with F9
+(evil-global-set-key 'normal (kbd "<leader> df") 'make-empty-file) ; Use magit with F9
 ;;; Sly
 (evil-global-set-key 'normal (kbd "<leader> sl") 'sly)
 (evil-global-set-key 'normal (kbd "<leader> sb") 'sly-eval-buffer)
 (evil-global-set-key 'normal (kbd "<leader> sf") 'sly-eval-defun)
 (evil-global-set-key 'visual (kbd "<leader> sr") 'sly-eval-region)
 ;;; Eglot
-(evil-global-set-key 'normal (kbd "<leader> ef") 'eglot-format-buffer)
+(evil-global-set-key 'normal (kbd "<leader> lf") 'eglot-format-buffer)
+(evil-global-set-key 'normal (kbd "<leader> la") 'eglot-code-actions)
 ;;; Rust
 (evil-global-set-key 'normal (kbd "<leader> rr") 'rust-run)
 ;;; Menus
