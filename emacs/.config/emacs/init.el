@@ -54,7 +54,7 @@
 (use-package indent-bars
   :ensure t
   :hook
-  ((rust-mode emacs-lisp-mode) . indent-bars-mode))
+  ((rust-mode emacs-lisp-mode lisp-mode) . indent-bars-mode))
 (use-package rainbow-delimiters
   :ensure t
   :hook
