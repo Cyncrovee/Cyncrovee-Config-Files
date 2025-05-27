@@ -11,8 +11,8 @@
  auto-save-default nil
  create-lockfiles nil
  indent-tabs-mode nil
- ring-bell-function 'ignore
  evil-want-keybinding nil
+ ring-bell-function 'ignore
  inferior-lisp-program "sbcl")
 ;;; Modeline format
 (setopt evil-mode-line-format 'before)
