@@ -6,6 +6,7 @@
 ;;; Set options
 (setopt
  use-short-answers t
+ use-package-compute-statistics t
  make-backup-files nil
  auto-save-default nil
  create-lockfiles nil
