@@ -125,17 +125,17 @@
 (evil-global-set-key 'normal (kbd "<leader> dk") 'describe-key)
 (evil-global-set-key 'normal (kbd "<leader> dm") 'describe-key)
 ;;; Sly
-(which-key-add-key-based-replacements "<leader> d" "Sly")
+(which-key-add-key-based-replacements "<leader> s" "Sly")
 (evil-global-set-key 'normal (kbd "<leader> sl") 'sly)
 (evil-global-set-key 'normal (kbd "<leader> sb") 'sly-eval-buffer)
 (evil-global-set-key 'normal (kbd "<leader> sf") 'sly-eval-defun)
 (evil-global-set-key 'visual (kbd "<leader> sr") 'sly-eval-region)
 ;;; Eglot
-(which-key-add-key-based-replacements "<leader> d" "Elgot")
+(which-key-add-key-based-replacements "<leader> l" "Elgot")
 (evil-global-set-key 'normal (kbd "<leader> lf") 'eglot-format-buffer)
 (evil-global-set-key 'normal (kbd "<leader> la") 'eglot-code-actions)
 ;;; Rust
-(which-key-add-key-based-replacements "<leader> d" "Rust")
+(which-key-add-key-based-replacements "<leader> r" "Rust")
 (evil-global-set-key 'normal (kbd "<leader> rr") 'rust-run)
 ;;; Menus
 (which-key-add-key-based-replacements "<leader> u" "Menus")
