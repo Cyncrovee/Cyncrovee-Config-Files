@@ -1,3 +1,10 @@
+(use-package spacemacs-theme
+  :ensure t
+  :defer t
+  :init
+  (load-theme 'spacemacs-dark))
+
+;;; Load elisp files
 (load-file (concat user-emacs-directory "/lisp/functions.el"))
 (load-file (concat user-emacs-directory "/lisp/options.el"))
 (load-file (concat user-emacs-directory "/lisp/packages-elpa.el"))

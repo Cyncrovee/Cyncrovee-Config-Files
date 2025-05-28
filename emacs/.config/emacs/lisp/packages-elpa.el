@@ -1,8 +1,4 @@
 ;;; Setup packages (ELPA)
-(use-package spacemacs-theme
-  :defer t
-  :init
-  (load-theme 'spacemacs-dark))
 (use-package evil
   :ensure t
   :init
