@@ -52,7 +52,7 @@
 (evil-global-set-key 'normal (kbd "<leader> rr") 'rust-run)
 ;;; Menus
 (which-key-add-key-based-replacements "<leader> u" "Menus")
-(evil-global-set-key 'normal (kbd "<leader> ub") 'buffer-menu)
+(evil-global-set-key 'normal (kbd "<leader> up") 'list-processes)
 ;;; Buffers
 (which-key-add-key-based-replacements "<leader> b" "Buffers")
 (evil-global-set-key 'normal (kbd "<leader> bm") 'buffer-menu)
