@@ -3,6 +3,8 @@
 (electric-quote-mode)
 (which-key-mode)
 (savehist-mode)
+(recentf-mode)
+(global-auto-revert-mode)
 
 ;;; Set options
 (setopt
