@@ -1,6 +1,6 @@
 ;; Setup UI
 (tool-bar-mode -1)
-(tab-bar-mode)
+(global-tab-line-mode)
 (menu-bar--display-line-numbers-mode-relative)
 (global-display-line-numbers-mode)
 (global-hl-line-mode)
