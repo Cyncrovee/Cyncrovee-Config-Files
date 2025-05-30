@@ -1,11 +1,12 @@
 ;;; Setup keymaps
-;;; General
 (evil-set-leader 'normal (kbd "SPC")) ; Set leader key
 (evil-global-set-key 'normal (kbd "<leader> SPC") 'execute-extended-command) ; Double tap space for M-x functionality (I think)
+;;; General
 (which-key-add-key-based-replacements "<leader> g" "General")
 (evil-global-set-key 'normal (kbd "<leader> gl") 'join-line) ; Connect current line to above line
-(evil-global-set-key 'normal (kbd "<leader> gc") 'open-emacs-config) ; Opent the config directory in dired
-(evil-global-set-key 'normal (kbd "<leader> gt") 'swap-theme) ; Hot swap between spacemacs themes
+(evil-global-set-key 'normal (kbd "<leader> gc") 'open-emacs-config) ; Open the config directory in dired
+(evil-global-set-key 'normal (kbd "<leader> gb") 'type-break) ; Take a break from typing
+(evil-global-set-key 'normal (kbd "<leader> gh") 'kill-current-buffer)
 ;;; Evil
 (which-key-add-key-based-replacements "<leader> e" "Evil")
 (which-key-add-key-based-replacements "<leader> ew" "Evil Write")
