@@ -6,3 +6,10 @@
   (interactive)
   (evil-write)
   (evil-quit))
+
+(defun simple-magit ()
+  "Open Magit, then delete other windows."
+  (interactive)
+  (magit)
+  (delete-other-windows)
+  (olivetti-mode))

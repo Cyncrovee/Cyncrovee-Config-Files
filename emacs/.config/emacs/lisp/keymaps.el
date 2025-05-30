@@ -21,12 +21,13 @@
 (evil-global-set-key 'normal (kbd "M-j") 'evil-window-down)
 (evil-global-set-key 'normal (kbd "M-h") 'evil-window-left)
 (evil-global-set-key 'normal (kbd "M-l") 'evil-window-right)
-;;; Magit
-(evil-global-set-key 'normal (kbd "<f9>") 'magit) ; Use magit with F9
 (evil-global-set-key 'normal (kbd "<up>") 'evil-window-up)
 (evil-global-set-key 'normal (kbd "<down>") 'evil-window-down)
 (evil-global-set-key 'normal (kbd "<left>") 'evil-window-left)
 (evil-global-set-key 'normal (kbd "<right>") 'evil-window-right)
+;;; Magit
+(evil-global-set-key 'normal (kbd "<f9>") 'magit) ; Use magit with F9
+(evil-global-set-key 'normal (kbd "<C-f9>") 'simple-magit) ; Opens Magit, then deletes other windows
 ;;; Files/Directories
 (which-key-add-key-based-replacements "<leader> c" "Files/Directories")
 (evil-global-set-key 'normal (kbd "<leader> cd") 'make-directory)
