@@ -56,6 +56,9 @@
 (evil-global-set-key 'normal (kbd "<leader> tn") 'tab-bar-new-tab)
 (evil-global-set-key 'normal (kbd "<leader> tc") 'tab-bar-close-tab)
 (evil-global-set-key 'normal (kbd "<leader> to") 'tab-bar-close-other-tabs)
-;;; Modes
+;;; Modes/Misc Toggles
 (which-key-add-key-based-replacements "<leader> m" "Modes")
 (evil-global-set-key 'normal (kbd "<leader> mo") 'olivetti-mode)
+(evil-global-set-key 'normal (kbd "<leader> mh") 'global-diff-hl-mode)
+(evil-global-set-key 'normal (kbd "<leader> mw") 'global-visual-line-mode)
+(evil-global-set-key 'normal (kbd "<leader> ml") 'toggle-truncate-lines)
