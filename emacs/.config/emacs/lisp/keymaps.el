@@ -29,9 +29,14 @@
 (evil-global-set-key 'normal (kbd "<f9>") 'magit) ; Use magit with F9
 (evil-global-set-key 'normal (kbd "<C-f9>") 'simple-magit) ; Opens Magit, then deletes other windows
 ;;; Files/Directories
-(which-key-add-key-based-replacements "<leader> c" "Files/Directories")
-(evil-global-set-key 'normal (kbd "<leader> cd") 'make-directory)
-(evil-global-set-key 'normal (kbd "<leader> cf") 'make-empty-file)
+(which-key-add-key-based-replacements "<leader> f" "Files/Directories")
+(which-key-add-key-based-replacements "<leader> ff" "Find/Navigate Files/Directories")
+(which-key-add-key-based-replacements "<leader> fc" "Create Files/Directories")
+(evil-global-set-key 'normal (kbd "<leader> ffr") 'recentf)
+(evil-global-set-key 'normal (kbd "<leader> ffo") 'recentf-open-files)
+(evil-global-set-key 'normal (kbd "<leader> ffs") 'project-switch-project)
+(evil-global-set-key 'normal (kbd "<leader> fcd") 'make-directory)
+(evil-global-set-key 'normal (kbd "<leader> fcf") 'make-empty-file)
 ;;; Describe
 (which-key-add-key-based-replacements "<leader> d" "Describe")
 (evil-global-set-key 'normal (kbd "<leader> ds") 'describe-symbol)
