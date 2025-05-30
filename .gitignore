@@ -14,6 +14,5 @@ projects
 recentf
 config.el
 personal.el
-custom.el
 bookmarks
 .lsp-session-v1
