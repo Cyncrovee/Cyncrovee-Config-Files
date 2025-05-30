@@ -33,6 +33,8 @@
   ((lisp-mode-hook emacs-lisp-mode-hook) . rainbow-delimiters-mode))
 (use-package magit
   :ensure t)
+(use-package diff-hl
+  :ensure t)
 (use-package aggressive-indent
   :ensure t
   :hook
@@ -42,3 +44,5 @@
 (use-package rust-mode
   :ensure t
   :hook (rust-mode . 'eglot-ensure))
+(use-package markdown-mode
+  :ensure t)
