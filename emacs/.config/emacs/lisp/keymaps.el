@@ -3,7 +3,6 @@
 (evil-set-leader 'normal (kbd "SPC")) ; Set leader key
 (evil-global-set-key 'normal (kbd "<leader> SPC") 'execute-extended-command) ; Double tap space for M-x functionality (I think)
 (which-key-add-key-based-replacements "<leader> g" "General")
-(evil-global-set-key 'normal (kbd "<leader> gw") 'other-window) ; Move to another window
 (evil-global-set-key 'normal (kbd "<leader> gl") 'join-line) ; Connect current line to above line
 (evil-global-set-key 'normal (kbd "<leader> gc") 'open-emacs-config) ; Opent the config directory in dired
 (evil-global-set-key 'normal (kbd "<leader> gt") 'swap-theme) ; Hot swap between spacemacs themes
@@ -15,16 +14,18 @@
 (which-key-add-key-based-replacements "<leader> eq" "Evil Quit")
 (evil-global-set-key 'normal (kbd "<leader> eqq") 'evil-quit)
 (evil-global-set-key 'normal (kbd "<leader> eqa") 'evil-quit-all)
-(evil-global-set-key 'normal (kbd "<up>") 'evil-window-up)
-(evil-global-set-key 'normal (kbd "<down>") 'evil-window-down)
-(evil-global-set-key 'normal (kbd "<left>") 'evil-window-left)
-(evil-global-set-key 'normal (kbd "<right>") 'evil-window-right)
+;; Window Managment
+(evil-global-set-key 'normal (kbd "M-o") 'other-window) ; Move to another window
 (evil-global-set-key 'normal (kbd "M-k") 'evil-window-up)
 (evil-global-set-key 'normal (kbd "M-j") 'evil-window-down)
 (evil-global-set-key 'normal (kbd "M-h") 'evil-window-left)
 (evil-global-set-key 'normal (kbd "M-l") 'evil-window-right)
 ;;; Magit
 (evil-global-set-key 'normal (kbd "<f9>") 'magit) ; Use magit with F9
+(evil-global-set-key 'normal (kbd "<up>") 'evil-window-up)
+(evil-global-set-key 'normal (kbd "<down>") 'evil-window-down)
+(evil-global-set-key 'normal (kbd "<left>") 'evil-window-left)
+(evil-global-set-key 'normal (kbd "<right>") 'evil-window-right)
 ;;; Files/Directories
 (which-key-add-key-based-replacements "<leader> c" "Files/Directories")
 (evil-global-set-key 'normal (kbd "<leader> cd") 'make-directory)
