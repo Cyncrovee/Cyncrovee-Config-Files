@@ -4,5 +4,7 @@
 (menu-bar--display-line-numbers-mode-relative)
 (global-display-line-numbers-mode)
 (global-hl-line-mode)
+(window-divider-mode)
 (column-number-mode)
 (display-time-mode)
+(global-visual-line-mode)
