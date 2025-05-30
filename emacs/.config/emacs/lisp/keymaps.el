@@ -53,6 +53,10 @@
 ;;; Menus
 (which-key-add-key-based-replacements "<leader> u" "Menus")
 (evil-global-set-key 'normal (kbd "<leader> ub") 'buffer-menu)
+;;; Buffers
+(which-key-add-key-based-replacements "<leader> b" "Buffers")
+(evil-global-set-key 'normal (kbd "<leader> bm") 'buffer-menu)
+(evil-global-set-key 'normal (kbd "<leader> bc") 'kill-current-buffer)
 ;;; Tabs
 (which-key-add-key-based-replacements "<leader> t" "Tabs")
 (evil-global-set-key 'normal (kbd "<leader> tn") 'tab-bar-new-tab)
