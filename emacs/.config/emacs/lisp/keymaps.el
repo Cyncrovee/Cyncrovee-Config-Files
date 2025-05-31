@@ -64,9 +64,10 @@
 (evil-global-set-key 'normal (kbd "<leader> bc") 'kill-current-buffer)
 ;;; Tabs
 (which-key-add-key-based-replacements "<leader> t" "Tabs")
-(evil-global-set-key 'normal (kbd "<leader> tn") 'tab-bar-new-tab)
-(evil-global-set-key 'normal (kbd "<leader> tc") 'tab-bar-close-tab)
-(evil-global-set-key 'normal (kbd "<leader> to") 'tab-bar-close-other-tabs)
+(evil-global-set-key 'normal (kbd "<leader> tn") 'tab-line-new-tab)
+(evil-global-set-key 'normal (kbd "<leader> tc") 'tab-line-close-tab)
+(evil-global-set-key 'normal (kbd "C-<tab>") 'tab-line-switch-to-next-tab)
+(evil-global-set-key 'normal (kbd "C-<iso-lefttab>") 'tab-line-switch-to-prev-tab)
 ;;; Modes/Misc Toggles
 (which-key-add-key-based-replacements "<leader> m" "Modes")
 (evil-global-set-key 'normal (kbd "<leader> mo") 'olivetti-mode)
