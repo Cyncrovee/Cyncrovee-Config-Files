@@ -5,7 +5,6 @@
 (which-key-add-key-based-replacements "<leader> g" "General")
 (evil-global-set-key 'normal (kbd "<leader> gl") 'join-line) ; Connect current line to above line
 (evil-global-set-key 'normal (kbd "<leader> gb") 'type-break) ; Take a break from typing
-(evil-global-set-key 'normal (kbd "<leader> gh") 'kill-current-buffer)
 ;;; Evil
 (which-key-add-key-based-replacements "<leader> e" "Evil")
 (which-key-add-key-based-replacements "<leader> ew" "Evil Write")
