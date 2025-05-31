@@ -29,6 +29,7 @@
 (which-key-add-key-based-replacements "<leader> f" "Files/Directories")
 (which-key-add-key-based-replacements "<leader> ff" "Find/Navigate Files/Directories")
 (which-key-add-key-based-replacements "<leader> fc" "Create Files/Directories")
+(evil-global-set-key 'normal (kbd "<leader> ffd") 'dired)
 (evil-global-set-key 'normal (kbd "<leader> ffr") 'recentf)
 (evil-global-set-key 'normal (kbd "<leader> ffo") 'recentf-open-files)
 (evil-global-set-key 'normal (kbd "<leader> ffs") 'project-switch-project)
