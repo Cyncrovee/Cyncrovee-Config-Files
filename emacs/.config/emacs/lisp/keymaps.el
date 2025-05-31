@@ -4,7 +4,6 @@
 ;;; General
 (which-key-add-key-based-replacements "<leader> g" "General")
 (evil-global-set-key 'normal (kbd "<leader> gl") 'join-line) ; Connect current line to above line
-(evil-global-set-key 'normal (kbd "<leader> gc") 'open-emacs-config) ; Open the config directory in dired
 (evil-global-set-key 'normal (kbd "<leader> gb") 'type-break) ; Take a break from typing
 (evil-global-set-key 'normal (kbd "<leader> gh") 'kill-current-buffer)
 ;;; Evil
@@ -35,6 +34,7 @@
 (evil-global-set-key 'normal (kbd "<leader> ffr") 'recentf)
 (evil-global-set-key 'normal (kbd "<leader> ffo") 'recentf-open-files)
 (evil-global-set-key 'normal (kbd "<leader> ffs") 'project-switch-project)
+(evil-global-set-key 'normal (kbd "<leader> ffc") 'open-emacs-config)
 (evil-global-set-key 'normal (kbd "<leader> fcd") 'make-directory)
 (evil-global-set-key 'normal (kbd "<leader> fcf") 'make-empty-file)
 ;;; Describe
