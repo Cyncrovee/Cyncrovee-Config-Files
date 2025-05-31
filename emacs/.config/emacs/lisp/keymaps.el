@@ -4,7 +4,6 @@
 ;;; General
 (which-key-add-key-based-replacements "<leader> g" "General")
 (evil-global-set-key 'normal (kbd "<leader> gl") 'join-line) ; Connect current line to above line
-(evil-global-set-key 'normal (kbd "<leader> gb") 'type-break) ; Take a break from typing
 ;;; Evil
 (which-key-add-key-based-replacements "<leader> e" "Evil")
 (which-key-add-key-based-replacements "<leader> ew" "Evil Write")
@@ -73,3 +72,4 @@
 (evil-global-set-key 'normal (kbd "<leader> mh") 'global-diff-hl-mode)
 (evil-global-set-key 'normal (kbd "<leader> mw") 'global-visual-line-mode)
 (evil-global-set-key 'normal (kbd "<leader> ml") 'toggle-truncate-lines)
+(evil-global-set-key 'normal (kbd "<leader> mb") 'type-break) ; Take a break from typing
