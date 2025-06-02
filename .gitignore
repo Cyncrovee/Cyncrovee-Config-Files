@@ -6,6 +6,7 @@ tree-sitter/
 newsticker/
 auto-save-list/
 emms/
+scripts/
 .cache/
 session.*
 wget-log*
