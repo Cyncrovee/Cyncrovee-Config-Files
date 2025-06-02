@@ -46,3 +46,9 @@
   :hook (rust-mode . 'eglot-ensure))
 (use-package markdown-mode
   :ensure t)
+(use-package consult
+  :ensure t)
+(use-package embark
+  :ensure t)
+(use-package embark-consult
+  :ensure t)
