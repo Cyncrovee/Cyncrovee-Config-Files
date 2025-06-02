@@ -1,9 +1,6 @@
 ;;; Setup keymaps
 (evil-set-leader 'normal (kbd "SPC")) ; Set leader key
 (evil-global-set-key 'normal (kbd "<leader> SPC") 'execute-extended-command) ; Double tap space for M-x functionality (I think)
-;;; General
-(which-key-add-key-based-replacements "<leader> g" "General")
-(evil-global-set-key 'normal (kbd "<leader> gl") 'join-line) ; Connect current line to above line
 ;;; Evil
 (which-key-add-key-based-replacements "<leader> e" "Evil")
 (which-key-add-key-based-replacements "<leader> ew" "Evil Write")
@@ -67,6 +64,11 @@
 (evil-global-set-key 'normal (kbd "<leader> tc") 'tab-line-close-tab)
 (evil-global-set-key 'normal (kbd "C-<tab>") 'tab-line-switch-to-next-tab)
 (evil-global-set-key 'normal (kbd "C-<iso-lefttab>") 'tab-line-switch-to-prev-tab)
+;;; Lines
+(which-key-add-key-based-replacements "<leader> l" "Lines")
+(evil-global-set-key 'normal (kbd "<leader> lg") 'join-line) ; Connect current line to above line
+(evil-global-set-key 'normal (kbd "<leader> lt") 'toggle-truncate-lines)
+(evil-global-set-key 'normal (kbd "<leader> lc") 'comment-line)
 ;;; Modes/Misc Toggles
 (which-key-add-key-based-replacements "<leader> m" "Modes")
 (evil-global-set-key 'normal (kbd "<leader> mo") 'olivetti-mode)
