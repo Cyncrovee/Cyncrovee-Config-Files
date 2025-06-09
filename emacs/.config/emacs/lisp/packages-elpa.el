@@ -5,13 +5,7 @@
   (evil-mode)
   :config
   (evil-set-undo-system 'undo-redo))
-(use-package company
-  :ensure t
-  :init
-  (setq company-minimum-prefix-length 1
-        company-idle-delay 0)
-  (global-company-mode)
-  (company-tng-mode))
+(use-corfu-completion)
 (use-package vertico
   :ensure t
   :init
