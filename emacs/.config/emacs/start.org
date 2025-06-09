@@ -1,0 +1,22 @@
+* Welcome to Emacs!
+
+** The leader key is most likely set to space.
+
+*** Quick Access
+====== Open the Config Directory: "<leader> ffc" ======
+====== Open a Project: "<leader> fps"            ======
+====== Open the Buffer Menu: "<leader> bm"       ======
+====== Exit Emacs: "<leader> eqa"                ======
+
+*** Keymap Groups
+------ Buffers: "<leader> b"           ------
+------ Describe: "<leader> d"          ------
+------ Describe: "<leader> d"          ------
+------ Evil: "<leader> e"              ------
+------ Files/Directories: "<leader> f" ------
+------ Lines: "<leader> l"             ------
+------ Modes and Toggles: "<leader> m" ------
+------ Rust: "<leader> r"              ------
+------ Sly: "<leader> s"               ------
+------ Tabs: "<leader> t"              ------
+------ Menus: "<leader> u"             ------

@@ -1,6 +1,10 @@
 ;;; Setup keymaps
+;;; General
 (evil-set-leader 'normal (kbd "SPC")) ; Set leader key
+(evil-set-leader 'visual (kbd "SPC")) ; Set leader key
 (evil-global-set-key 'normal (kbd "<leader> SPC") 'execute-extended-command) ; Double tap space for M-x functionality (I think)
+(which-key-add-key-based-replacements "<leader> q" "Restart Emacs")
+(evil-global-set-key 'normal (kbd "<leader> qq") 'restart-emacs)
 ;;; Evil
 (which-key-add-key-based-replacements "<leader> e" "Evil")
 (which-key-add-key-based-replacements "<leader> ew" "Evil Write")
@@ -25,11 +29,13 @@
 ;;; Files/Directories
 (which-key-add-key-based-replacements "<leader> f" "Files/Directories")
 (which-key-add-key-based-replacements "<leader> ff" "Find/Navigate Files/Directories")
+(which-key-add-key-based-replacements "<leader> fp" "Find/Navigate Projects")
 (which-key-add-key-based-replacements "<leader> fc" "Create Files/Directories")
 (evil-global-set-key 'normal (kbd "<leader> ffd") 'dired)
 (evil-global-set-key 'normal (kbd "<leader> ffr") 'recentf)
 (evil-global-set-key 'normal (kbd "<leader> ffo") 'recentf-open-files)
-(evil-global-set-key 'normal (kbd "<leader> ffs") 'project-switch-project)
+(evil-global-set-key 'normal (kbd "<leader> fps") 'project-switch-project)
+(evil-global-set-key 'normal (kbd "<leader> fpf") 'project-dired)
 (evil-global-set-key 'normal (kbd "<leader> ffc") 'open-emacs-config)
 (evil-global-set-key 'normal (kbd "<leader> fcd") 'make-directory)
 (evil-global-set-key 'normal (kbd "<leader> fcf") 'make-empty-file)
@@ -54,10 +60,12 @@
 ;;; Menus
 (which-key-add-key-based-replacements "<leader> u" "Menus")
 (evil-global-set-key 'normal (kbd "<leader> up") 'list-processes)
+(evil-global-set-key 'normal (kbd "<leader> ua") 'embark-act)
 ;;; Buffers
 (which-key-add-key-based-replacements "<leader> b" "Buffers")
 (evil-global-set-key 'normal (kbd "<leader> bm") 'buffer-menu)
 (evil-global-set-key 'normal (kbd "<leader> bc") 'kill-current-buffer)
+(evil-global-set-key 'normal (kbd "<leader> bt") 'term)
 ;;; Tabs
 (which-key-add-key-based-replacements "<leader> t" "Tabs")
 (evil-global-set-key 'normal (kbd "<leader> tn") 'tab-line-new-tab)
@@ -72,6 +80,7 @@
 ;;; Modes/Misc Toggles
 (which-key-add-key-based-replacements "<leader> m" "Modes")
 (evil-global-set-key 'normal (kbd "<leader> mo") 'olivetti-mode)
+(evil-global-set-key 'normal (kbd "<leader> mc") 'focus-mode)
 (evil-global-set-key 'normal (kbd "<leader> mh") 'global-diff-hl-mode)
 (evil-global-set-key 'normal (kbd "<leader> mw") 'global-visual-line-mode)
 (evil-global-set-key 'normal (kbd "<leader> ml") 'toggle-truncate-lines)
