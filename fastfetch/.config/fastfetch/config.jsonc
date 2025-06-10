@@ -1,0 +1,35 @@
+{
+    "modules": [
+        "title",
+        "datetime",
+        {
+            "type": "custom",
+            "format": "SOFTWARE:"
+        },
+        "os",
+        "kernel",
+        "bootmgr",
+        "initsystem",
+        "bios",
+        "uptime",
+        "packages",
+        "shell",
+        "lm",
+        "de",
+        "wm",
+        "terminal",
+        {
+            "type": "custom",
+            "format": "HARDWARE:"
+        },
+        "display",
+        "board",
+        "cpu",
+        "tpm",
+        "gpu",
+        "memory",
+        "disk",
+        "break",
+        "colors"
+    ]
+}
