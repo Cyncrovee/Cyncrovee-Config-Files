@@ -14,6 +14,7 @@
         "uptime",
         "packages",
         "shell",
+        "editor",
         "lm",
         "de",
         "wm",
@@ -29,6 +30,17 @@
         "gpu",
         "memory",
         "disk",
+        {
+            "type": "custom",
+            "format": "APPEARANCE & MEDIA:"
+        },
+		"wallpaper",
+		"icons",
+		"font",
+		"terminalfont",
+		"terminalsize",
+		"player",
+		"media",
         "break",
         "colors"
     ]
