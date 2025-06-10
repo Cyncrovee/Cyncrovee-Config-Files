@@ -72,11 +72,12 @@
 (evil-global-set-key 'normal (kbd "<leader> tc") 'tab-line-close-tab)
 (evil-global-set-key 'normal (kbd "C-<tab>") 'tab-line-switch-to-next-tab)
 (evil-global-set-key 'normal (kbd "C-<iso-lefttab>") 'tab-line-switch-to-prev-tab)
-;;; Lines
+;;; Lines/Region
 (which-key-add-key-based-replacements "<leader> l" "Lines")
 (evil-global-set-key 'normal (kbd "<leader> lg") 'join-line) ; Connect current line to above line
 (evil-global-set-key 'normal (kbd "<leader> lt") 'toggle-truncate-lines)
 (evil-global-set-key 'normal (kbd "<leader> lc") 'comment-line)
+(evil-global-set-key 'visual (kbd "<leader> le") 'eval-region)
 ;;; Modes/Misc Toggles
 (which-key-add-key-based-replacements "<leader> m" "Modes")
 (evil-global-set-key 'normal (kbd "<leader> mo") 'olivetti-mode)
