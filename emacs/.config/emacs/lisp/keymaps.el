@@ -1,18 +1,18 @@
 ;;; Setup keymaps
 ;;; General
-(evil-set-leader 'normal (kbd "SPC")) ; Set leader key
-(evil-set-leader 'visual (kbd "SPC")) ; Set leader key
+(evil-set-leader 'normal (kbd "SPC")) ; Set leader key (normal mode)
+(evil-set-leader 'visual (kbd "SPC")) ; Set leader key (visual mode)
 (evil-global-set-key 'normal (kbd "<leader> SPC") 'execute-extended-command) ; Double tap space for M-x functionality (I think)
 (which-key-add-key-based-replacements "<leader> q" "Restart Emacs")
 (evil-global-set-key 'normal (kbd "<leader> qq") 'restart-emacs)
-;;; Evil
-(which-key-add-key-based-replacements "<leader> e" "Evil")
-(which-key-add-key-based-replacements "<leader> ew" "Evil Write")
-(evil-global-set-key 'normal (kbd "<leader> eww") 'evil-write)
-(evil-global-set-key 'normal (kbd "<leader> ewq") 'evil-write-quit)
-(which-key-add-key-based-replacements "<leader> eq" "Evil Quit")
-(evil-global-set-key 'normal (kbd "<leader> eqq") 'evil-quit)
-(evil-global-set-key 'normal (kbd "<leader> eqa") 'evil-quit-all)
+;;; Write
+(which-key-add-key-based-replacements "<leader> w" "Write")
+(evil-global-set-key 'normal (kbd "<leader> ww") 'evil-write)
+(evil-global-set-key 'normal (kbd "<leader> wq") 'evil-write-quit)
+;;; Quit
+(which-key-add-key-based-replacements "<leader> q" "Quit")
+(evil-global-set-key 'normal (kbd "<leader> qq") 'evil-quit)
+(evil-global-set-key 'normal (kbd "<leader> qa") 'evil-quit-all)
 ;; Window Managment
 (evil-global-set-key 'normal (kbd "M-o") 'other-window) ; Move to another window
 (evil-global-set-key 'normal (kbd "M-k") 'evil-window-up)
