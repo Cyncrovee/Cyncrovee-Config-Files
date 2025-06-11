@@ -20,11 +20,11 @@
 (use-package indent-bars
   :ensure t
   :hook
-  ((rust-mode) . indent-bars-mode))
+  ((rust-mode conf-space-mode) . indent-bars-mode))
 (use-package rainbow-delimiters
   :ensure t
   :hook
-  ((lisp-mode-hook emacs-lisp-mode-hook) . rainbow-delimiters-mode))
+  ((lisp-mode emacs-lisp-mode conf-space-mode) . rainbow-delimiters-mode))
 (use-package magit
   :ensure t)
 (use-package diff-hl
@@ -32,7 +32,7 @@
 (use-package aggressive-indent
   :ensure t
   :hook
-  ((lisp-mode-hook emacs-lisp-mode-hook) . aggressive-indent-mode))
+  ((lisp-mode emacs-lisp-mode) . aggressive-indent-mode))
 (use-package sly
   :ensure t)
 (use-package rust-mode
