@@ -13,6 +13,7 @@
 (which-key-add-key-based-replacements "<leader> q" "Quit")
 (evil-global-set-key 'normal (kbd "<leader> qq") 'evil-quit)
 (evil-global-set-key 'normal (kbd "<leader> qa") 'evil-quit-all)
+(evil-global-set-key 'normal (kbd "<leader> qr") 'restart-emacs)
 ;; Window Managment
 (evil-global-set-key 'normal (kbd "M-o") 'other-window) ; Move to another window
 (evil-global-set-key 'normal (kbd "M-k") 'evil-window-up)
