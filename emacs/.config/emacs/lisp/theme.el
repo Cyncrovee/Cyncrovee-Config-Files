@@ -3,8 +3,9 @@
   :config
   (if (string-equal-ignore-case user-boot-theme "light")
       (load-theme 'ef-light))
-  (if (string-equal user-boot-theme "summer")
+  (if (string-equal-ignore-case user-boot-theme "summer")
       (load-theme 'ef-summer))
   (if (string-equal-ignore-case user-boot-theme "dark")
-	  (load-theme 'ef-owl)))
-
+	  (load-theme 'ef-owl))
+  (if (string-equal-ignore-case user-boot-theme "winter")
+	  (load-theme 'ef-winter)))
