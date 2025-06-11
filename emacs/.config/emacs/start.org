@@ -1,13 +1,14 @@
-* Welcome to Emacs!
+* Welcome to my Emacs configuration!
+If this is your first time booting, you may see some warning/error messages. These (hopefully) shouldn’t be a problem unless they show up again after reboot.
 
 ** The leader key is most likely set to space.
 
 *** Quick Access
 ====== Open the user config file, for base configuration: "<leader> ffu" ======
-====== Open the Config Directory: "<leader> ffc" ======
-====== Open a Project: "<leader> fps"            ======
-====== Open the Buffer Menu: "<leader> bm"       ======
-====== Exit Emacs: "<leader> eqa"                ======
+====== Open the Config Directory: "<leader> ffc"                         ======
+====== Open a Project: "<leader> fps"                                    ======
+====== Open the Buffer Menu: "<leader> bm"                               ======
+====== Exit Emacs: "<leader> eqa"                                        ======
 
 *** Keymap Groups
 ------ Buffers: "<leader> b"           ------
