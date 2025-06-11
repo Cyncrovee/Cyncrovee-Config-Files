@@ -1,5 +1,5 @@
 ;;; Setup user settings
-(defvar user-boot-theme)
+(defvar user-boot-theme nil)
 (defvar user-completion-provider)
 (load-file (concat user-emacs-directory "/lisp/user.el"))
 
