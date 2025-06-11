@@ -16,7 +16,7 @@ If this is your first time booting, you may see some warning/error messages. The
 ------ Describe: "<leader> d"          ------
 ------ Evil: "<leader> e"              ------
 ------ Files/Directories: "<leader> f" ------
------- Lines: "<leader> l"             ------
+------ Lines/Region: "<leader> l"             ------
 ------ Modes and Toggles: "<leader> m" ------
 ------ Rust: "<leader> r"              ------
 ------ Sly: "<leader> s"               ------

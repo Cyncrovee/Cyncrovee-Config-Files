@@ -76,7 +76,7 @@
 (evil-global-set-key 'normal (kbd "C-<tab>") 'tab-line-switch-to-next-tab)
 (evil-global-set-key 'normal (kbd "C-<iso-lefttab>") 'tab-line-switch-to-prev-tab)
 ;;; Lines/Region
-(which-key-add-key-based-replacements "<leader> l" "Lines")
+(which-key-add-key-based-replacements "<leader> l" "Lines/Region")
 (evil-global-set-key 'normal (kbd "<leader> lg") 'join-line) ; Connect current line to above line
 (evil-global-set-key 'normal (kbd "<leader> lt") 'toggle-truncate-lines)
 (evil-global-set-key 'normal (kbd "<leader> lc") 'comment-line)
