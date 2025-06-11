@@ -39,6 +39,7 @@
 (evil-global-set-key 'normal (kbd "<leader> fpd") 'project-dired)
 (evil-global-set-key 'normal (kbd "<leader> fpf") 'project-find-file)
 (evil-global-set-key 'normal (kbd "<leader> ffc") 'open-emacs-config)
+(evil-global-set-key 'normal (kbd "<leader> ffu") 'open-user-file)
 (evil-global-set-key 'normal (kbd "<leader> fcd") 'make-directory)
 (evil-global-set-key 'normal (kbd "<leader> fcf") 'make-empty-file)
 ;;; Describe

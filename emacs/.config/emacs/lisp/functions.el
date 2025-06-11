@@ -39,6 +39,11 @@
   (interactive)
   (dired user-emacs-directory))
 
+(defun open-user-file ()
+  "Open the user config file, for base configuration."
+  (interactive)
+  (find-file-existing (concat user-emacs-directory "lisp/user.el")))
+
 (defun evil-write-quit ()
   "Call evil-write, then evil-quit."
   (interactive)

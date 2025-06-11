@@ -3,6 +3,7 @@
 ** The leader key is most likely set to space.
 
 *** Quick Access
+====== Open the user config file, for base configuration: "<leader> ffu" ======
 ====== Open the Config Directory: "<leader> ffc" ======
 ====== Open a Project: "<leader> fps"            ======
 ====== Open the Buffer Menu: "<leader> bm"       ======

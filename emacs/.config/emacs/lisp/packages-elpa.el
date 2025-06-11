@@ -5,7 +5,10 @@
   (evil-mode)
   :config
   (evil-set-undo-system 'undo-redo))
-(use-corfu-completion)
+(if (string-equal user-completion-provider "corfu")
+	(use-corfu-completion))
+(if (string-equal user-completion-provider "company")
+	(use-company-completion))
 (use-package vertico
   :ensure t
   :init
