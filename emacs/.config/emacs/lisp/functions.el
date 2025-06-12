@@ -51,7 +51,7 @@
   (evil-quit))
 
 (defun simple-magit ()
-  "Open Magit, then delete other windows."
+  "Open Magit, then delete other windows and enable Olivetti mode."
   (interactive)
   (magit)
   (delete-other-windows)
