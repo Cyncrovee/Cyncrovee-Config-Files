@@ -1,10 +1,13 @@
 * Welcome to my Emacs configuration!
 If this is your first time booting, you may see some warning/error messages. These (hopefully) shouldn’t be a problem unless they show up again after reboot.
 
+You can access the user.el file with "<leader> ffe". This file is for high level configuration, and is intended to be relatively simple and easy to use.
+If you want to access the full config, you can use "<leader> ffc".
+
 ** The leader key is most likely set to space.
 
 *** Quick Access
-====== Open the user config file, for base configuration: "<leader> ffu" ======
+====== Open the user config file, for base configuration: "<leader> ffe" ======
 ====== Open the Config Directory: "<leader> ffc"                         ======
 ====== Open a Project: "<leader> fps"                                    ======
 ====== Open the Buffer Menu: "<leader> bm"                               ======
