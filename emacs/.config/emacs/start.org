@@ -11,7 +11,8 @@ If you want to access the full config, you can use "<leader> ffc".
 ====== Open the Config Directory: "<leader> ffc"                         ======
 ====== Open a Project: "<leader> fps"                                    ======
 ====== Open the Buffer Menu: "<leader> bm"                               ======
-====== Exit Emacs: "<leader> eqa"                                        ======
+====== Exit Emacs: "<leader> qq"                                         ======
+====== Restart Emacs: "<leader> qr"                                      ======
 
 *** Keymap Groups
 ------ Buffers: "<leader> b"           ------
