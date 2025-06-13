@@ -1,5 +1,7 @@
 # cynvee-main-config-files
 
+# Waring: The Emacs config is being transferred to https://github.com/Cyncrovee/Unbox-EMC. Look there for future updates.
+
 This is a git repo for my configuration files.
 If you decide to use any of these configs, feel free to add or remove from them as you see fit- Have fun with it!
 
