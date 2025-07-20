@@ -1,7 +1,9 @@
 " Color/Visual Options
 syntax on
 set termguicolors
-set guicursor+=a:blinkon0 " Disable cursor blinking in GVim
+if has ("gui_running")
+    set guicursor+=a:blinkon0 " Disable cursor blinking in GVim
+endif
 
 " General Options
 set relativenumber
