@@ -1,0 +1,31 @@
+{
+	"modules": [
+    	"title",
+		"separator",
+		"os",
+		"host",
+		"kernel",
+		"initsystem",
+		"bootmgr",
+		"uptime",
+		"packages",
+		"shell",
+		"editor",
+		"lm",
+		"de",
+		"wm",
+		"wmtheme",
+		"icons",
+		"font",
+		"terminalfont",
+		"display",
+		"board",
+		"cpu",
+		"gpu",
+		"memory",
+		"disk",
+		"break",
+		"colors"
+	]
+
+}
