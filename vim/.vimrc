@@ -38,3 +38,5 @@ nmap <leader>wa :wa<CR>
 nmap <leader>qq :q<CR>
 nmap <leader>qa :qa<CR>
 nmap <leader>. :Ex<CR>
+nmap \| :vsplit <CR>
+nmap - :split <CR>
