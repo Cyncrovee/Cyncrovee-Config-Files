@@ -34,35 +34,35 @@ set wildoptions=pum,fuzzy
 
 " Set up statusline
 set statusline=
-set statusline+=%#TabLineSel#
-set statusline+=\   " Space
-set statusline+=\%f " File type
-set statusline+=\   " Space
-set statusline+=\%h " Help flag
-set statusline+=\%r " Read-Only flag
-set statusline+=\%m " Modified flag
-set statusline+=\%w " Preview window flag
-set statusline+=\%q " Quickfix\Location list
-set statusline+=\   " Space
-set statusline+=%#CursorLine#
-set statusline+=\%= " Split to right hand side
-set statusline+=%#StatusLine#
-set statusline+=\   " Space
-set statusline+=\%y " File type
-set statusline+=\   " Space
-set statusline+=\%n " Buffer number
-set statusline+=\   " Space
-set statusline+=\%L " Total amount of lines in buffer
-set statusline+=\   " Space
-set statusline+=%#TabLineSel#
-set statusline+=\   " Space
-set statusline+=\%l " Line number
-set statusline+=:   " Line/column number separator
-set statusline+=\%v " Visual column number
-set statusline+=\   " Space
-set statusline+=\%p " File progress percentage
-set statusline+=%%  " % Character
-set statusline+=\   " Space
+set statusline+=%#TabLineSel#   " Change colour
+set statusline+=\               " Space
+set statusline+=\%f             " File type
+set statusline+=\               " Space
+set statusline+=\%h             " Help flag
+set statusline+=\%r             " Read-Only flag
+set statusline+=\%m             " Modified flag
+set statusline+=\%w             " Preview window flag
+set statusline+=\%q             " Quickfix\Location list
+set statusline+=\               " Space
+set statusline+=%#CursorLine#   " Change colour
+set statusline+=\%=             " Split to right hand side
+set statusline+=%#StatusLine#   " Change colour
+set statusline+=\               " Space
+set statusline+=\%y             " File type
+set statusline+=\               " Space
+set statusline+=\%n             " Buffer number
+set statusline+=\               " Space
+set statusline+=\%L             " Total amount of lines in buffer
+set statusline+=\               " Space
+set statusline+=%#TabLineSel#   " Change colour
+set statusline+=\               " Space
+set statusline+=\%l             " Line number
+set statusline+=:               " Line/column number separator
+set statusline+=\%v             " Visual column number
+set statusline+=\               " Space
+set statusline+=\%p             " File progress percentage
+set statusline+=%%              " % Character
+set statusline+=\               " Space
 
 " Keymaps
 let mapleader = " "
