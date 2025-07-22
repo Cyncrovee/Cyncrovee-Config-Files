@@ -12,6 +12,7 @@ set splitbelow
 set nowrap
 set nobackup
 set nocompatible
+set noswapfile
 set hlsearch
 set incsearch
 set ignorecase
@@ -31,6 +32,7 @@ set sidescrolloff=5
 set colorcolumn=120
 set belloff=all
 set wildoptions=pum,fuzzy
+set completeopt=menuone,preview,popup,noselect,fuzzy
 
 " Set up statusline
 set statusline=
