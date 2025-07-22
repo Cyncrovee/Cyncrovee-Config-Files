@@ -69,12 +69,12 @@ set statusline+=\               " Space
 " Keymaps
 let mapleader = " "
 let maplocalleader = " "
-nmap <leader>ww :w<CR>
-nmap <leader>wa :wa<CR>
-nmap <leader>wq :wq<CR>
-nmap <leader>qq :q<CR>
-nmap <leader>qa :qa<CR>
-nmap <leader>. :Ex<CR>
-nmap <leader>hn :noh<CR>
-nmap \| :vsplit <CR>
-nmap - :split <CR>
+nmap <leader>ww <Cmd>w<CR>
+nmap <leader>wa <Cmd>wa<CR>
+nmap <leader>wq <Cmd>wq<CR>
+nmap <leader>qq <Cmd>q<CR>
+nmap <leader>qa <Cmd>qa<CR>
+nmap <leader>. <Cmd>Ex<CR>
+nmap <leader>hn <Cmd>noh<CR>
+nmap \| <Cmd>vsplit<CR>
+nmap - <Cmd>split<CR>
