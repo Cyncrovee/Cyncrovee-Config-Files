@@ -76,9 +76,16 @@ nmap <leader>qq <Cmd>q<CR>
 nmap <leader>qa <Cmd>qa<CR>
 nmap <leader>ee <Cmd>Lex<CR>
 nmap <leader>. <Cmd>Ex<CR>
+nmap <leader>cd <Cmd>cd %:h<CR>
 nmap <leader>hn <Cmd>noh<CR>
+nmap Y y$
+nmap ; :
 nmap \| <Cmd>vsplit<CR>
 nmap - <Cmd>split<CR>
+nmap <S-left> <Cmd>wincmd h<CR>
+nmap <S-down> <Cmd>wincmd j<CR>
+nmap <S-up> <Cmd>wincmd k<CR>
+nmap <S-right> <Cmd>wincmd l<CR>
 nmap <F5> <Cmd>vertical res +10<CR>
 nmap <F6> <Cmd>vertical res -10<CR>
 nmap <F7> <Cmd>horizontal res +10<CR>
